@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protocolo Noites Inteiras — Sono do Bebê sem Deixar Chorar</title>
+<meta name="description" content="O protocolo de sono do bebê que elimina os despertares de forma rápida, gentil e eficaz — sem deixar chorar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#191917;          /* títulos / texto forte */
+    --body:#6E6560;         /* texto corrido */
+    --cream:#F7F4F2;        /* seções claras alternadas */
+    --blush:#F9EEF0;        /* rosa clarinho */
+    --pink:#E5B0B7;         /* botões / destaques */
+    --pink-dark:#D493A0;    /* hover */
+    --mauve:#9C636C;        /* eyebrows / acentos */
+    --rose:#E7C6CD;         /* seção depoimentos */
+    --line:#ECE4E0;         /* bordas sutis */
+    --verde:#31A24C;
+    --gold:#E8B931;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,sans-serif;
+    background:#fff;
+    color:var(--body);
+    line-height:1.7;
+    font-size:15px;
+    overflow-x:hidden;
+  }
+  img,svg{max-width:100%;display:block;}
+  .container{max-width:640px;margin:0 auto;padding:0 22px;}
+  section{padding:64px 0;position:relative;}
+  h1,h2,h3{color:var(--ink);font-weight:600;line-height:1.3;}
+  h2{font-size:1.5rem;margin-bottom:10px;}
+  p{margin-bottom:16px;}
+  .ic{stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+
+  /* ---------- assinatura Pregiva: eyebrow + subtítulo serif itálico ---------- */
+  .eyebrow{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:.7rem;
+    font-weight:600;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:var(--mauve);
+    margin-bottom:14px;
+  }
+  .eyebrow svg{width:12px;height:12px;flex-shrink:0;}
+  .centro .eyebrow{justify-content:center;}
+  .centro{text-align:center;}
+  .sub-serif{
+    font-family:Georgia,'Times New Roman',serif;
+    font-style:italic;
+    font-size:1.02rem;
+    color:var(--ink);
+    opacity:.85;
+    margin-bottom:14px;
+  }
+  .divisor{
+    width:64px;height:2px;
+    background:var(--pink);
+    border:none;
+    margin:0 0 22px;
+  }
+  .centro .divisor{margin-left:auto;margin-right:auto;}
+
+  /* ---------- botões pill ---------- */
+  .cta-btn{
+    display:inline-block;
+    background:var(--pink);
+    color:var(--ink);
+    text-transform:uppercase;
+    font-weight:700;
+    font-size:.78rem;
+    letter-spacing:1.2px;
+    text-align:center;
+    text-decoration:none;
+    padding:17px 34px;
+    border-radius:999px;
+    transition:background .15s ease, transform .15s ease;
+    box-shadow:0 8px 22px rgba(212,147,160,.35);
+  }
+  .cta-btn:hover{background:var(--pink-dark);transform:translateY(-1px);}
+  .cta-branco{
+    background:#fff;
+    color:var(--pink-dark);
+    box-shadow:0 10px 26px rgba(25,25,23,.14);
+  }
+  .cta-branco:hover{background:#FDF7F8;color:var(--mauve);}
+  .cta-block{display:block;width:100%;}
+  .selos-linha{
+    text-align:center;
+    font-size:.8rem;
+    margin-top:14px;
+    color:var(--body);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(180deg,var(--blush) 0%,#fff 100%);
+    padding:0 0 60px;
+    overflow:hidden;
+  }
+  .topo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:30px 22px 8px;
+  }
+  .topo .logo-ico{
+    width:40px;height:40px;
+    background:var(--pink);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;
+  }
+  .topo .logo-ico svg{width:22px;height:22px;}
+  .topo .nome b{display:block;font-size:1.05rem;font-weight:700;color:var(--ink);letter-spacing:.5px;line-height:1.1;}
+  .topo .nome span{font-size:.62rem;letter-spacing:3.5px;color:var(--mauve);text-transform:uppercase;font-weight:600;}
+  .hero-centro{margin-top:28px;text-align:center;}
+  .hero-centro .eyebrow{justify-content:center;}
+  .hero-centro h1{
+    font-size:1.75rem;
+    font-weight:700;
+    margin-bottom:18px;
+  }
+  .hero-centro .sub{font-size:1rem;margin-bottom:30px;}
+  .hero-centro .sub strong{color:var(--mauve);}
+  .hero-centro .pos-foto{margin-top:38px;margin-bottom:28px;}
+  .hero-foto{position:relative;}
+  .hero-img{margin:0;}
+  .hero-img img{
+    width:100%;
+    border-radius:24px;
+    border:10px solid #fff;
+    box-shadow:0 24px 50px rgba(156,99,108,.25);
+  }
+  .hero-foto .chip{
+    position:absolute;
+    left:50%;bottom:-16px;
+    transform:translateX(-50%);
+    background:#fff;
+    border-radius:999px;
+    padding:10px 20px;
+    font-size:.72rem;
+    font-weight:600;
+    color:var(--ink);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    box-shadow:0 10px 26px rgba(25,25,23,.12);
+    white-space:nowrap;
+  }
+  .hero-foto .chip .dot{
+    width:18px;height:18px;
+    background:var(--verde);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .hero-foto .chip .dot svg{width:11px;height:11px;}
+
+  /* ---------- seções ---------- */
+  .sec-cream{background:var(--cream);}
+  .sec-blush{background:var(--blush);}
+  .sec-rose{background:var(--rose);}
+
+  /* ---------- foto do bloco problema ---------- */
+  .foto-problema{
+    max-width:440px;
+    margin:30px auto 0;
+  }
+  .foto-problema img{
+    width:100%;
+    border-radius:22px;
+    border:8px solid #fff;
+    box-shadow:0 20px 46px rgba(156,99,108,.25);
+  }
+
+  /* ---------- BLOCO 4 — SINTOMAS ---------- */
+  .sintomas-grid{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-top:30px;
+  }
+  .sintoma{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:20px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .sintoma .ic-box{
+    width:46px;height:46px;
+    background:var(--blush);
+    border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--mauve);
+    flex-shrink:0;
+  }
+  .sintoma .ic-box svg{width:24px;height:24px;}
+  .sintoma p{margin:0;font-size:.88rem;font-weight:500;color:var(--ink);}
+  .sintoma.destaque{
+    background:var(--ink);
+    border-color:var(--ink);
+  }
+  .sintoma.destaque p{color:#fff;font-weight:600;font-size:.95rem;}
+  .sintoma.destaque .ic-box{background:var(--pink);color:var(--ink);}
+
+  /* ---------- BLOCO 5 — VÍDEO ---------- */
+  .video-wrap{
+    position:relative;
+    width:100%;
+    aspect-ratio:9/13;
+    max-width:380px;
+    margin:30px auto 0;
+    background:linear-gradient(175deg,#E9C3CB,#C98E9B);
+    border-radius:24px;
+    overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 18px 44px rgba(156,99,108,.3);
+    border:8px solid #fff;
+  }
+  .video-wrap .play{
+    width:74px;height:74px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+    box-shadow:0 8px 24px rgba(25,25,23,.25);
+  }
+  .video-wrap .play::after{
+    content:"";
+    border-left:22px solid var(--ink);
+    border-top:13px solid transparent;
+    border-bottom:13px solid transparent;
+    margin-left:6px;
+  }
+  .video-wrap .vsl-label{
+    position:absolute;bottom:14px;left:0;right:0;
+    text-align:center;color:rgba(255,255,255,.85);font-size:.72rem;font-weight:600;
+  }
+  .checks-lista{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin:26px 0 20px;
+  }
+  .checks-lista li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+    color:var(--ink);
+    font-size:.92rem;
+    justify-content:center;
+  }
+  .checks-lista .dot{
+    width:20px;height:20px;
+    background:var(--verde);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .checks-lista .dot svg{width:12px;height:12px;}
+
+  /* ---------- BLOCO 6 — PILARES ---------- */
+  .pilares-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+    margin-top:32px;
+  }
+  .pilar{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px 24px;
+    text-align:center;
+  }
+  .pilar .ic-circ{
+    width:64px;height:64px;
+    margin:0 auto 16px;
+    border:1.5px solid var(--pink);
+    background:var(--blush);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--mauve);
+  }
+  .pilar .ic-circ svg{width:30px;height:30px;}
+  .pilar h3{font-size:1rem;margin-bottom:8px;letter-spacing:.4px;}
+  .pilar p{margin:0;font-size:.85rem;}
+
+  /* ---------- BLOCOS 7 e 14 — PREÇO ---------- */
+  .preco-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:24px;
+    padding:38px 26px 30px;
+    text-align:center;
+    margin-top:30px;
+    box-shadow:0 20px 50px rgba(156,99,108,.12);
+    position:relative;
+  }
+  .preco-card .selo-mini{
+    position:absolute;
+    top:-20px;left:50%;
+    transform:translateX(-50%);
+    background:var(--ink);
+    color:#fff;
+    border-radius:999px;
+    font-size:.65rem;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    padding:9px 22px;
+    white-space:nowrap;
+  }
+  .antes{font-size:1.05rem;color:var(--body);margin-bottom:2px;}
+  .antes s{color:#B23A48;}
+  .agora-label{font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:0;}
+  .agora{
+    font-size:3.6rem;
+    font-weight:700;
+    color:var(--ink);
+    line-height:1.1;
+  }
+  .agora small{font-size:1.4rem;font-weight:600;color:var(--mauve);}
+  .parcelas{
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:1rem;
+    color:var(--mauve);
+    margin-bottom:24px;
+  }
+  .pagamentos{
+    border-top:1px solid var(--line);
+    margin-top:24px;
+    padding-top:18px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .pagamentos .metodos,.pagamentos .badges{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 18px;
+  }
+  .pag-logo{
+    color:#8A817C;
+    font-weight:700;
+    font-size:.78rem;
+    display:flex;align-items:center;gap:5px;
+  }
+  .pag-logo .flame{width:13px;height:15px;}
+  .pag-logo.visa{font-style:italic;font-size:.88rem;}
+  .mc i,.maestro i{width:14px;height:14px;border-radius:50%;display:inline-block;}
+  .mc i:first-child{background:#EB001B;opacity:.75;}
+  .mc i:last-child{background:#F79E1B;margin-left:-5px;opacity:.75;}
+  .maestro i:first-child{background:#0099DF;opacity:.75;}
+  .maestro i:last-child{background:#ED0006;margin-left:-5px;opacity:.75;}
+  .amex{background:#8A9BB0;color:#fff;font-size:.6rem;font-weight:800;padding:3px 6px;border-radius:3px;letter-spacing:.5px;}
+  .diners{font-style:italic;}
+  .badge-seg{
+    color:#8A817C;
+    font-size:.64rem;
+    font-weight:600;
+    line-height:1.2;
+    display:flex;align-items:center;gap:6px;
+  }
+  .badge-seg svg{width:17px;height:17px;flex-shrink:0;}
+
+  /* ---------- BLOCO 8 — CUSTO ---------- */
+  .custo-grid{display:flex;flex-direction:column;gap:14px;margin-top:30px;}
+  .custo-item{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:22px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .custo-item .num{
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:1.6rem;
+    color:var(--pink-dark);
+    line-height:1;
+    flex-shrink:0;
+    min-width:34px;
+  }
+  .custo-item p{margin:0;font-size:.88rem;}
+
+  /* ---------- BLOCO 9 — DEPOIMENTOS ---------- */
+  .depo-grid{display:flex;flex-direction:column;gap:18px;margin-top:32px;}
+  .depo-card{
+    background:#fff;
+    border-radius:18px;
+    padding:24px;
+    position:relative;
+    box-shadow:0 12px 30px rgba(156,99,108,.15);
+  }
+  .depo-card .aspas{
+    position:absolute;
+    top:18px;right:22px;
+    font-family:Georgia,serif;
+    font-size:2.6rem;
+    color:var(--pink);
+    line-height:1;
+  }
+  .estrelas{color:var(--gold);font-size:.85rem;letter-spacing:2px;margin-bottom:12px;}
+  .depo-card .print{
+    aspect-ratio:4/3;
+    background:var(--blush);
+    border:1px dashed var(--pink-dark);
+    border-radius:12px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:8px;
+    color:var(--mauve);
+    font-size:.78rem;
+    font-weight:600;
+    text-align:center;
+    padding:12px;
+    margin-bottom:16px;
+  }
+  .depo-card .print svg{width:30px;height:30px;}
+  .depo-card .fala{font-size:.9rem;color:var(--body);margin-bottom:14px;font-style:italic;font-family:Georgia,serif;}
+  .depo-card .mae{display:flex;align-items:center;gap:12px;}
+  .depo-card .mae .avatar{
+    width:42px;height:42px;
+    background:var(--blush);
+    border:1.5px solid var(--pink);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--mauve);
+    flex-shrink:0;
+  }
+  .depo-card .mae .avatar svg{width:20px;height:20px;}
+  .depo-card .mae b{display:block;color:var(--ink);font-size:.88rem;font-weight:600;}
+  .depo-card .mae span{font-size:.75rem;color:var(--mauve);}
+
+  /* ---------- BLOCO 10 — GARANTIA ---------- */
+  .garantia-img{
+    max-width:640px;
+    margin:0 auto;
+  }
+  .garantia-img img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 16px 40px rgba(25,25,23,.25);
+  }
+
+  /* ---------- BLOCO 11 — AUTORIDADE ---------- */
+  .expert-grid{display:flex;flex-direction:column;gap:30px;margin-top:30px;}
+  .expert-foto{
+    aspect-ratio:4/4.6;
+    max-width:360px;
+    margin:0 auto;
+    border-radius:200px 200px 20px 20px;
+    background:linear-gradient(175deg,#F3D9DE,#DFB3BD);
+    border:10px solid #fff;
+    box-shadow:0 22px 46px rgba(156,99,108,.22);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:14px;
+    color:var(--mauve);
+    font-size:.8rem;
+    font-weight:600;
+  }
+  .expert-foto svg{width:52px;height:52px;opacity:.85;}
+  .expert-txt p{font-size:.92rem;}
+
+  /* ---------- BLOCO 12 — FAQ ---------- */
+  .faq-lista{display:flex;flex-direction:column;gap:12px;margin-top:30px;}
+  .faq-item{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .faq-item summary{
+    list-style:none;
+    cursor:pointer;
+    padding:18px 52px 18px 22px;
+    font-weight:600;
+    color:var(--ink);
+    font-size:.9rem;
+    position:relative;
+    user-select:none;
+    line-height:1.5;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+";
+    position:absolute;
+    right:20px;top:50%;
+    transform:translateY(-50%);
+    width:26px;height:26px;
+    background:var(--blush);
+    color:var(--mauve);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.1rem;
+    font-weight:500;
+  }
+  .faq-item[open] summary::after{content:"−";}
+  .faq-item .resposta{padding:0 22px 20px;font-size:.88rem;}
+  .faq-item .resposta p{margin:0;}
+
+  /* ---------- BLOCO 13 — ENTREGÁVEIS ---------- */
+  .entrega-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+    margin-top:32px;
+  }
+  .entrega{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:22px;
+    display:flex;
+    gap:16px;
+    align-items:center;
+  }
+  .entrega .ic-circ{
+    width:52px;height:52px;
+    border:1.5px solid var(--pink);
+    background:var(--blush);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--mauve);
+    flex-shrink:0;
+  }
+  .entrega .ic-circ svg{width:25px;height:25px;}
+  .entrega p{margin:0;font-size:.88rem;font-weight:500;color:var(--ink);}
+  .entrega p .chk{color:var(--verde);font-weight:700;margin-right:4px;}
+
+  /* ---------- BLOCO 14 — FINAL ---------- */
+  .final .ultimas{
+    display:block;
+    margin-top:18px;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--mauve);
+    text-align:center;
+  }
+
+  footer{
+    background:var(--ink);
+    color:rgba(255,255,255,.65);
+    text-align:center;
+    padding:36px 22px;
+    font-size:.75rem;
+  }
+  footer .logo-foot{
+    display:flex;align-items:center;justify-content:center;gap:9px;
+    margin-bottom:16px;
+  }
+  footer .logo-foot .logo-ico{
+    width:32px;height:32px;background:var(--pink);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;color:#fff;
+  }
+  footer .logo-foot .logo-ico svg{width:18px;height:18px;}
+  footer .logo-foot b{color:#fff;font-size:.9rem;letter-spacing:.5px;}
+  footer p{margin-bottom:6px;}
+
+  /* ---------- DESKTOP ---------- */
+  @media(min-width:768px){
+    body{font-size:16px;}
+    .container{max-width:1000px;}
+    section{padding:84px 0;}
+    h2{font-size:2rem;}
+    .hero-centro{max-width:760px;margin-left:auto;margin-right:auto;margin-top:40px;}
+    .hero-centro h1{font-size:2.35rem;}
+    .hero-foto{max-width:680px;margin:0 auto;}
+    .topo{justify-content:flex-start;max-width:1000px;margin:0 auto;padding-left:22px;}
+    .sintomas-grid{display:grid;grid-template-columns:1fr 1fr;}
+    .sintoma.destaque{grid-column:1/-1;}
+    .pilares-grid{grid-template-columns:repeat(4,1fr);}
+    .custo-grid{display:grid;grid-template-columns:1fr 1fr;}
+    .depo-grid{flex-direction:row;flex-wrap:wrap;}
+    .depo-card{flex:1 1 calc(50% - 10px);}
+    .expert-grid{flex-direction:row;align-items:center;gap:60px;}
+    .expert-foto{flex:1;}
+    .expert-txt{flex:1.2;}
+    .expert-txt p{text-align:left;}
+    .entrega-grid{grid-template-columns:1fr 1fr;}
+    .agora{font-size:4.4rem;}
+    .cta-block{max-width:460px;margin-left:auto;margin-right:auto;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     TODOS OS BOTÕES CTA usam a classe .checkout-link
+     Edite o link no <script> no final da página: CHECKOUT_URL
+     ============================================================ -->
+
+<!-- ===== BLOCO 2 — HERO ===== -->
+<section class="hero">
+  <div class="topo">
+    <div class="logo-ico">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M13 4a8 8 0 1 0 7 12A8.5 8.5 0 0 1 13 4z"/></svg>
+    </div>
+    <div class="nome">
+      <b>Protocolo Noites Inteiras</b>
+      <span>Sono do bebê · 1 a 6 meses</span>
+    </div>
+  </div>
+
+  <div class="container hero-centro">
+    <h1>Seu bebê dorme no seu colo e quando você coloca ele no berço, ele acorda? Você não consegue ter noites de sono tranquilas pois toda hora ele acorda na madrugada?</h1>
+    <p class="sub">Isso não é fase e você não está fazendo nada de errado. É <strong>associação de sono</strong> — um hábito que o cérebro dele criou.</p>
+    <div class="hero-foto">
+      <figure class="hero-img">
+        <img src="hero-mae-berco.webp" alt="Mãe exausta com as mãos na cabeça ao lado do berço com o bebê acordado de madrugada">
+      </figure>
+      <div class="chip">
+        <span class="dot"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l5 5L19.5 8" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        Método gentil · sem deixar chorar
+      </div>
+    </div>
+    <p class="sub pos-foto">E hábito se troca: <strong>em até 14 noites</strong>, com um passo simples por noite e sem uma lágrima, seu bebê aprende a dormir sozinho no berço — e você volta a dormir a noite inteira.</p>
+  </div>
+</section>
+
+<!-- ===== BLOCO 3 — PROBLEMA + VILÃO DA SOLUÇÃO COMUM ===== -->
+<section class="sec-cream">
+  <div class="container centro">
+    <div class="eyebrow">
+      <svg viewBox="0 0 24 24" fill="#D493A0"><path d="M12 21S3 15.3 3 9.6A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 9 2.7C21 15.3 12 21 12 21z"/></svg>
+      Entenda o que está acontecendo
+    </div>
+    <h2>Meses de rotina, chá, ruído branco e conselhos de todo mundo sem melhora? Então seu bebê pode estar preso numa ASSOCIAÇÃO DE SONO.</h2>
+    <p class="sub-serif">O hábito invisível que sabota as noites da sua casa.</p>
+    <hr class="divisor">
+    <p>A associação de sono é um hábito que pode estar presente sem que você perceba: seu bebê aprendeu que dormir = peito, colo ou balanço. E se você usa métodos de "deixar chorar" como solução, pode quebrar a confiança do seu bebê — e o estrago será <strong>PIOR</strong>.</p>
+    <figure class="foto-problema">
+      <img src="mae-exausta.webp" alt="Mãe exausta de madrugada segurando o bebê chorando ao lado do berço">
+    </figure>
+  </div>
+</section>
+
+<!-- ===== BLOCO 4 — CHECKLIST DE SINTOMAS ===== -->
+<section>
+  <div class="container">
+    <div class="centro">
+      <div class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="#D493A0"><path d="M12 21S3 15.3 3 9.6A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 9 2.7C21 15.3 12 21 12 21z"/></svg>
+        Você se reconhece?
+      </div>
+      <h2>Os sinais de que existe uma associação de sono</h2>
+      <p class="sub-serif">Se você marcar dois ou mais, o protocolo foi feito pra você.</p>
+      <hr class="divisor">
+    </div>
+    <figure class="foto-problema" style="margin-top:0;">
+      <img src="pais-exaustos.png" alt="Pais exaustos sentados no chão do quarto com o bebê no colo">
+    </figure>
+    <div class="sintomas-grid">
+      <div class="sintoma">
+        <span class="ic-box"><svg viewBox="0 0 24 24" class="ic"><circle cx="9" cy="7" r="3.2"/><path d="M4 20c0-3.5 2-6 5-6 2 0 3 .8 4.5 2.4L17 20"/><path d="M13.5 13.5c1.8-.6 4 .3 4.8 2.2"/></svg></span>
+        <p>Só dorme no colo ou no peito — no berço acorda em minutos</p>
+      </div>
+      <div class="sintoma destaque">
+        <span class="ic-box"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="13" r="7.5"/><path d="M12 9v4l3 2"/><path d="M4.5 5.5 7 3.5M19.5 5.5 17 3.5"/></svg></span>
+        <p>Despertares de hora em hora, a noite inteira, que não melhoram por mais que você tente.</p>
+      </div>
+      <div class="sintoma">
+        <span class="ic-box"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="12" r="9"/><path d="M8.2 10.2q1 1 2 0M13.8 10.2q1 1 2 0"/><path d="M8.5 16q3.5-2.4 7 0"/></svg></span>
+        <p>Demora 1 a 3 horas pra pegar no sono, lutando contra o sono</p>
+      </div>
+      <div class="sintoma">
+        <span class="ic-box"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="14" r="7.5"/><path d="M12 10.5V14l2.4 1.4"/><path d="M10 2.5h4M12 2.5v2"/></svg></span>
+        <p>Sonecas de 20 minutos cronometrados durante o dia</p>
+      </div>
+      <div class="sintoma">
+        <span class="ic-box"><svg viewBox="0 0 24 24" class="ic"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5"/><text x="12" y="17.6" text-anchor="middle" font-size="7.5" font-weight="700" fill="currentColor" stroke="none" font-family="Poppins,sans-serif">4</text></svg></span>
+        <p>Dormia bem e "desandou" perto dos 4 meses</p>
+      </div>
+      <div class="sintoma">
+        <span class="ic-box"><svg viewBox="0 0 24 24" class="ic"><path d="M9.5 4a6.5 6.5 0 1 0 6.8 9.3A8 8 0 0 1 9.5 4z"/><circle cx="17.5" cy="6.5" r="2.6"/><path d="M17.5 1.8v1.2M17.5 10v1.2M12.8 6.5H14M21 6.5h1.2"/></svg></span>
+        <p>Trocou o dia pela noite</p>
+      </div>
+      <div class="sintoma">
+        <span class="ic-box"><svg viewBox="0 0 24 24" class="ic"><rect x="2.5" y="8" width="16" height="8.5" rx="2.5"/><path d="M18.5 10.5h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-2"/><rect x="5" y="10.5" width="3.5" height="3.5" rx="1" fill="currentColor" stroke="none"/></svg></span>
+        <p>Você no modo zumbi: sem memória, sem paciência, sem energia</p>
+      </div>
+      <div class="sintoma">
+        <span class="ic-box"><svg viewBox="0 0 24 24" class="ic"><path d="M7.5 15.5A5.5 5.5 0 0 1 8 4.6a6 6 0 0 1 11.5 1.8A4.5 4.5 0 0 1 18 15.5z"/><circle cx="7" cy="19.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="4" cy="22" r=".9" fill="currentColor" stroke="none"/></svg></span>
+        <p>Sensação de que "nunca mais vou dormir uma noite inteira"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOCO 5 — VÍDEO + NORMALIZAÇÃO ===== -->
+<section class="sec-blush">
+  <div class="container centro">
+    <h2>Por que isso acontece com o seu bebê?</h2>
+    <p class="sub-serif" style="margin-top:20px;">No dia a dia, todo bebê cria associações...</p>
+    <hr class="divisor">
+    <ul class="checks-lista">
+      <li><span class="dot"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l5 5L19.5 8" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Mamar pra dormir é instintivo.</li>
+      <li><span class="dot"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l5 5L19.5 8" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Colo é aconchego.</li>
+      <li><span class="dot"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l5 5L19.5 8" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Balanço acalma.</li>
+    </ul>
+    <p>Criar associação de sono acontece com qualquer bebê, não importa o quanto a mãe se dedique. O verdadeiro problema não é a associação. É não fazer nada a respeito. Um bebê que nunca aprende a dormir sozinho vai acumulando uma dívida de sono que afeta o humor, as mamadas e o desenvolvimento — e a sua saúde junto. Tão devagar que você normaliza. Tão devagar que assume que "bebê é assim mesmo". A boa notícia: <strong>todo bebê sabe aprender a dormir. Ele só precisa do apoio correto.</strong></p>
+  </div>
+</section>
+
+<!-- ===== BLOCO 6 — OS 4 PILARES DO PROTOCOLO ===== -->
+<section>
+  <div class="container">
+    <div class="centro">
+      <div class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="#D493A0"><path d="M12 21S3 15.3 3 9.6A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 9 2.7C21 15.3 12 21 12 21z"/></svg>
+        Como o protocolo funciona
+      </div>
+      <h2>Isto é exatamente o que o Protocolo Noites Inteiras faz pelo seu bebê:</h2>
+      <p class="sub-serif">Não é método de choro, nem lista de dicas soltas, nem mais um "ritual do sono" que você testa sem saber se é o problema. É um protocolo gentil e prático que te acompanha passo a passo para:</p>
+      <hr class="divisor">
+    </div>
+    <div class="pilares-grid">
+      <div class="pilar">
+        <div class="ic-circ"><svg viewBox="0 0 24 24" class="ic"><path d="M9.5 3.5a3.6 3.6 0 0 0-3.4 4.8A3.4 3.4 0 0 0 4.5 12a3.4 3.4 0 0 0 1.2 3.4 3.6 3.6 0 0 0 3.8 4.6c.7 0 1.5-.3 2-.7V4.3a3.6 3.6 0 0 0-2-.8z"/><path d="M14.5 3.5a3.6 3.6 0 0 1 3.4 4.8A3.4 3.4 0 0 1 19.5 12a3.4 3.4 0 0 1-1.2 3.4 3.6 3.6 0 0 1-3.8 4.6c-.7 0-1.5-.3-2-.7V4.3a3.6 3.6 0 0 1 2-.8z"/></svg></div>
+        <h3>Entender</h3>
+        <p>O que são associações de sono, como se formam nas primeiras semanas e por que estão por trás dos despertares, da luta contra o sono e das sonecas curtas.</p>
+      </div>
+      <div class="pilar">
+        <div class="ic-circ"><svg viewBox="0 0 24 24" class="ic"><path d="M13 3.5a8.5 8.5 0 1 0 7.5 12.6A9 9 0 0 1 13 3.5z"/><path d="M17 3l.8 1.8L19.6 5.6l-1.8.8L17 8.2l-.8-1.8-1.8-.8 1.8-.8z"/></svg></div>
+        <h3>Preparar</h3>
+        <p>O ambiente, a janela de sono e a rotina do seu bebê antes e durante o processo, pra que ele aprenda sem choro, sem resistência e sem recaídas.</p>
+      </div>
+      <div class="pilar">
+        <div class="ic-circ"><svg viewBox="0 0 24 24" class="ic"><path d="M4 9a8 8 0 0 1 14-3.5"/><path d="M18 2v4h-4"/><path d="M20 15a8 8 0 0 1-14 3.5"/><path d="M6 22v-4h4"/></svg></div>
+        <h3>Substituir</h3>
+        <p>Cada etapa da troca de associação — do peito/colo ao berço — com os passos certos, na ordem certa e no ritmo exato da idade do seu bebê (1 a 6 meses).</p>
+      </div>
+      <div class="pilar">
+        <div class="ic-circ"><svg viewBox="0 0 24 24" class="ic"><rect x="5" y="3.5" width="14" height="17" rx="2.5"/><path d="M9 3.5v2.5h6V3.5"/><path d="M8.5 11l2 2 4.5-4.5"/><path d="M8.5 16.5h7"/></svg></div>
+        <h3>Acompanhar</h3>
+        <p>Todo o processo, noite a noite, pra você saber exatamente o que fazer, o que esperar e como agir se ele chorar, acordar ou regredir.</p>
+      </div>
+    </div>
+    <figure class="foto-problema">
+      <img src="mae-berco-carinho.png" alt="Mãe observando com carinho o bebê dormindo tranquilo no berço">
+    </figure>
+  </div>
+</section>
+
+<!-- ===== BLOCO 8 — CUSTO DE NÃO FAZER NADA ===== -->
+<section>
+  <div class="container">
+    <div class="centro">
+      <div class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="#D493A0"><path d="M12 21S3 15.3 3 9.6A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 9 2.7C21 15.3 12 21 12 21z"/></svg>
+        Pense com carinho
+      </div>
+      <h2>Isto é o que realmente custa "esperar passar":</h2>
+      <hr class="divisor" style="margin-top:18px;">
+    </div>
+    <div class="custo-grid">
+      <div class="custo-item">
+        <span class="num">01</span>
+        <p>Meses de exaustão tratando os sintomas — chá, ruído, escurinho — sem identificar que a associação de sono está por trás de tudo.</p>
+      </div>
+      <div class="custo-item">
+        <span class="num">02</span>
+        <p>Uma associação que fica mais forte a cada semana: o que hoje se resolve em dias, com 1 ano leva semanas — com um bebê de 10 quilos no braço.</p>
+      </div>
+      <div class="custo-item">
+        <span class="num">03</span>
+        <p>Sua saúde pagando a conta em silêncio: memória, paciência, imunidade e o pós-parto que seu corpo não consegue concluir sem dormir.</p>
+      </div>
+      <div class="custo-item">
+        <span class="num">04</span>
+        <p>Noites roubadas, uma a uma, por um hábito que se resolve em 14 noites.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOCO 9 — DEPOIMENTOS ===== -->
+<section class="sec-rose">
+  <div class="container">
+    <div class="centro">
+      <div class="eyebrow" style="color:#7E4E57;">
+        <svg viewBox="0 0 24 24" fill="#7E4E57"><path d="M12 21S3 15.3 3 9.6A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 9 2.7C21 15.3 12 21 12 21z"/></svg>
+        Histórias reais
+      </div>
+      <h2>Experiências de quem já aplicou o protocolo</h2>
+      <hr class="divisor" style="background:#fff;margin-top:16px;">
+    </div>
+    <div class="depo-grid">
+      <div class="depo-card">
+        <span class="aspas">"</span>
+        <div class="estrelas">★★★★★</div>
+        <p class="fala">"Eu vou ser sincera: eu comprei achando que era mais um. Já tinha feito OUTRO curso de sono na gravidez, já tinha tentado rotina, chá de camomila, ruído branco, quarto escuro, quarto claro, rede... nada. Minha filha tava com 5 meses e eu dormia em blocos de 40 minutos. Quando li 'associação de sono' eu pensei: por que NINGUÉM me explicou isso antes? Fiz o diagnóstico da noite 1 e descobri que eu tava colocando ela pra dormir 1h depois do ponto. Na noite 4 ela dormiu 6 horas seguidas. Eu acordei assustada achando que tinha acontecido alguma coisa. Hoje, noite 16, ela dorme 19h30–5h30. Eu tinha desistido, gente. Ainda bem que a garantia me deu coragem."</p>
+        <div class="mae">
+          <span class="avatar"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1-4 4-6 7.5-6s6.5 2 7.5 6"/></svg></span>
+          <div><b>María Fernández</b></div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <span class="aspas">"</span>
+        <div class="estrelas">★★★★★</div>
+        <p class="fala">"Meu filho tem 3 meses e 7 quilos. SETE. Ele dormia no meu colo e eu ficava 40 minutos com medo de respirar. Colocava no berço... 5 minutos e ele acordava berrando. Eu passava o DIA com ele no braço, meu punho travou, fui parar no ortopedista. Achei que berço era luxo que meu filho nunca ia aceitar. O protocolo não mandou eu 'largar ele lá' — foi mudando aos pouquinhos, um passo por noite, eu do lado dele o tempo todo. Na noite 9 eu coloquei ele ACORDADO no berço e ele... dormiu. Sozinho. Eu chorei sentada no chão do quarto. Hoje soneca e noite são no berço. Meu braço voltou a ser meu."</p>
+        <div class="mae">
+          <span class="avatar"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1-4 4-6 7.5-6s6.5 2 7.5 6"/></svg></span>
+          <div><b>Valeria Ortiz</b></div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <span class="aspas">"</span>
+        <div class="estrelas">★★★★★</div>
+        <p class="fala">"Minha bebê de 6 meses acordava 6, 7, às vezes 8 vezes por noite. Só voltava a dormir no peito. Eu era chupeta humana e tava chegando no meu limite — mas TODO método que eu achava falava em desmame noturno e eu não queria tirar o peito dela de jeito nenhum, amamentar é sagrado pra mim. Quase não comprei por isso. Aí vi no FAQ que não precisava desmamar e resolvi testar pela garantia. É verdade: ela continua mamando pra caramba de dia, mama 1x na madrugada (que é a que ela precisa mesmo) e VOLTA A DORMIR SOZINHA. A diferença é que antes ela precisava do peito pra cada ciclo de sono. Agora o peito é alimento, não muleta. Eu durmo 6 horas seguidas amamentando. Ninguém me disse que isso era possível."</p>
+        <div class="mae">
+          <span class="avatar"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1-4 4-6 7.5-6s6.5 2 7.5 6"/></svg></span>
+          <div><b>Carmen López</b></div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <span class="aspas">"</span>
+        <div class="estrelas">★★★★★</div>
+        <p class="fala">"Eu era 100% contra treinamento de sono. Pra mim era tudo crueldade disfarçada, deixar bebê chorando sozinho no quarto pra 'aprender'. Falei isso pra minha amiga que me indicou e ela: 'é o contrário, você não sai de perto dele em momento NENHUM'. Li a página 3 vezes procurando pegadinha. Não tinha. Fiz o protocolo com meu filho de 4 meses e o máximo que teve foi resmungo de ajeitamento — daquele que ele já fazia no meu colo mesmo. Eu presente em cada noite, cada passo. Em 13 noites ele tava dormindo sozinho. Meu vínculo com ele não mudou NADA, ele acorda sorrindo. Pras mães que são contra choro controlado como eu: é literalmente o oposto. Eu vigio essas coisas como um falcão e assino embaixo."</p>
+        <div class="mae">
+          <span class="avatar"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1-4 4-6 7.5-6s6.5 2 7.5 6"/></svg></span>
+          <div><b>Daniela Navarro</b></div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <span class="aspas">"</span>
+        <div class="estrelas">★★★★★</div>
+        <p class="fala">"Minha filha DORMIA A NOITE TODA desde os 2 meses. Eu me achava, gente. Aí ela fez 4 meses e do nada: despertar de hora em hora, luta pra dormir, sonecas de 20 minutos. Eu achei que era dente, depois achei que era cólica, depois achei que era eu. Passei 3 semanas esperando 'a fase passar' e só piorava. No protocolo eu entendi que a regressão dos 4 meses não é fase que passa — é o sono dela que amadureceu e AGORA ela precisava saber dormir sozinha, coisa que nunca tinha precisado antes. Fazia todo sentido. Segui o passo a passo e em 10 noites recuperei minha dorminhoca — melhor que antes, porque agora ela emenda os ciclos sozinha. Se seu bebê 'desandou' do nada: não espera. Eu esperei 3 semanas que me custaram caro."</p>
+        <div class="mae">
+          <span class="avatar"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1-4 4-6 7.5-6s6.5 2 7.5 6"/></svg></span>
+          <div><b>Laura García</b></div>
+        </div>
+      </div>
+    </div>
+    <a href="#oferta-final" class="cta-btn cta-block cta-branco" style="margin-top:34px;">Quero meu bebê dormindo à noite toda</a>
+  </div>
+</section>
+
+<!-- ===== BLOCO 10 — GARANTIA ===== -->
+<section>
+  <div class="container">
+    <figure class="garantia-img">
+      <img src="garantia-selo.png" alt="Garantia de reembolso: acesse o protocolo e teste com tranquilidade; se decidir que não é o que buscava, devolução de 100% do dinheiro, sem perguntas nem complicações">
+    </figure>
+  </div>
+</section>
+
+<!-- ===== BLOCO 11 — AUTORIDADE ===== -->
+<section class="sec-cream">
+  <div class="container">
+    <div class="centro">
+      <div class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="#D493A0"><path d="M12 21S3 15.3 3 9.6A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 9 2.7C21 15.3 12 21 12 21z"/></svg>
+        Sua guia nessa jornada
+      </div>
+      <h2>Quem vai te guiar nesse caminho?</h2>
+      <hr class="divisor" style="margin-top:16px;">
+    </div>
+    <div class="expert-grid">
+      <!-- SUBSTITUIR: foto da expert -->
+      <div class="expert-foto">
+        <svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1-4 4-6 7.5-6s6.5 2 7.5 6"/></svg>
+        Inserir foto da expert
+      </div>
+      <div class="expert-txt centro">
+        <p>Muito prazer, eu sou a <strong>Renata</strong>, consultora de sono infantil certificada.</p>
+        <p>Mas antes da certificação, eu fui você: passei 7 meses dormindo em blocos de 2 horas com meu primeiro filho, ouvindo que "era fase". Foi ali que eu fui estudar o sono infantil a fundo — primeiro pra salvar as minhas noites, depois pra salvar as das outras mães.</p>
+        <p>Hoje eu ensino exatamente isso: os passos na ordem certa, do jeito gentil — <strong>sem choro controlado, sem desmame forçado, sem improviso</strong>. E é isso que vou fazer com você, noite a noite, pelos próximos 14 dias.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOCO 12 — FAQ ===== -->
+<section>
+  <div class="container">
+    <div class="centro">
+      <div class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="#D493A0"><path d="M12 21S3 15.3 3 9.6A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 9 2.7C21 15.3 12 21 12 21z"/></svg>
+        Tire suas dúvidas
+      </div>
+      <h2>Perguntas frequentes</h2>
+      <hr class="divisor" style="margin-top:16px;">
+    </div>
+    <div class="faq-lista">
+      <details class="faq-item">
+        <summary>Esse protocolo é indicado para bebês de qual idade?</summary>
+        <div class="resposta"><p>Para bebês de 1 a 6 meses.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Em quanto tempo começo a notar mudanças?</summary>
+        <div class="resposta"><p>Cada bebê é diferente. A maioria das mães nota melhora entre a 3ª e a 5ª noite. O mais importante é seguir o processo passo a passo.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto tempo por dia preciso dedicar?</summary>
+        <div class="resposta"><p>Minutos. As aulas são diretas e o protocolo foi desenhado pra rotina real de quem tem um bebê no colo.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>E se eu sentir que não é pra mim?</summary>
+        <div class="resposta"><p>Você tem 7 dias de garantia. Acessa o conteúdo e, se não for o que buscava, pede reembolso dentro do período.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Vou ter que deixar meu bebê chorando?</summary>
+        <div class="resposta"><p>Não. O protocolo é o oposto do choro controlado: gradual, com você presente o tempo todo.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Vou ter que tirar o peito?</summary>
+        <div class="resposta"><p>Não. Você só separa o mamar do dormir. As mamadas que ele precisa (inclusive noturnas, nessa idade) continuam.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Meu bebê tem cólica/refluxo. É pra ele?</summary>
+        <div class="resposta"><p>Sim. O protocolo tem os ajustes pra fase das cólicas e pra bebês com refluxo.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Serve pra quem nunca tentou nada?</summary>
+        <div class="resposta"><p>Sim. Foi desenhado pra quem não tem experiência: tudo explicado passo a passo, noite a noite.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Meu bebê vai sofrer durante o processo?</summary>
+        <div class="resposta"><p>Cada bebê reage de um jeito. Por isso o protocolo é progressivo — um micropasso por noite, buscando a transição mais suave possível.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Isso substitui o pediatra?</summary>
+        <div class="resposta"><p>Não. É um programa educativo sobre sono infantil. Não substitui diagnóstico nem tratamento médico.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Por quanto tempo terei acesso?</summary>
+        <div class="resposta"><p>Acesso VITALÍCIO... pra aplicar quantas vezes quiser — inclusive no próximo filho.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOCO 13 — CHECKLIST DE ENTREGÁVEIS ===== -->
+<section class="sec-cream">
+  <div class="container">
+    <div class="centro">
+      <div class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="#D493A0"><path d="M12 21S3 15.3 3 9.6A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 9 2.7C21 15.3 12 21 12 21z"/></svg>
+        Tudo o que você recebe
+      </div>
+      <h2>ENTRE NO PROTOCOLO E RECEBA:</h2>
+      <hr class="divisor" style="margin-top:16px;">
+    </div>
+    <div class="entrega-grid">
+      <div class="entrega">
+        <span class="ic-circ"><svg viewBox="0 0 24 24" class="ic"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20.5 20.5"/></svg></span>
+        <p><span class="chk">✔</span>Como as associações de sono se formam e como identificar a do seu bebê</p>
+      </div>
+      <div class="entrega">
+        <span class="ic-circ"><svg viewBox="0 0 24 24" class="ic"><path d="M13 3.5a8.5 8.5 0 1 0 7.5 12.6A9 9 0 0 1 13 3.5z"/></svg></span>
+        <p><span class="chk">✔</span>Protocolo de Troca Gentil passo a passo (14 noites)</p>
+      </div>
+      <div class="entrega">
+        <span class="ic-circ"><svg viewBox="0 0 24 24" class="ic"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5M7.5 13h3M13.5 13h3M7.5 16.5h3M13.5 16.5h3"/></svg></span>
+        <p><span class="chk">✔</span>Tabela de janelas de sono de 1 a 6 meses</p>
+      </div>
+      <div class="entrega">
+        <span class="ic-circ"><svg viewBox="0 0 24 24" class="ic"><path d="M7.5 14.5A5 5 0 0 1 8 4.9a5.5 5.5 0 0 1 10.6 1.6A4 4 0 0 1 17.5 14.5z"/><path d="M8 18.5h2.5l-2 3h2.5M14 17.5h2l-1.6 2.5h2"/></svg></span>
+        <p><span class="chk">✔</span>Guia de sonecas + regressão dos 4 meses</p>
+      </div>
+      <div class="entrega">
+        <span class="ic-circ"><svg viewBox="0 0 24 24" class="ic"><path d="M10 5.5h4l1 3.5v9a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-9z"/><path d="M10.5 5.5V4a1.5 1.5 0 0 1 3 0v1.5M9 12.5h6"/></svg></span>
+        <p><span class="chk">✔</span>Ajustes pra cólica, refluxo e cama compartilhada</p>
+      </div>
+      <div class="entrega">
+        <span class="ic-circ"><svg viewBox="0 0 24 24" class="ic"><path d="M12 2.5l8 3v6c0 5-3.4 9.2-8 10.5-4.6-1.3-8-5.5-8-10.5v-6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-4.5"/></svg></span>
+        <p><span class="chk">✔</span>Hábitos pra nunca mais voltar aos despertares</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOCO 14 — PREÇO FINAL + ESCASSEZ ===== -->
+<section class="sec-blush final" id="oferta-final">
+  <div class="container centro">
+    <h2>Investir no sono do seu bebê é uma das melhores decisões que você pode tomar.</h2>
+    <div class="preco-card">
+      <span class="selo-mini">Garantia de 7 dias</span>
+      <p class="antes">Antes: <s>€57</s></p>
+      <p class="agora-label">Agora, por apenas:</p>
+      <p class="agora"><small>€</small>19</p>
+      <a href="#" class="cta-btn cta-block checkout-link">Quero começar meu protocolo hoje à noite</a>
+      <p class="selos-linha">Acesso imediato · Pagamento seguro · Garantia de 7 dias</p>
+      <div class="pagamentos">
+        <div class="metodos">
+          <span class="pag-logo"><svg class="flame" viewBox="0 0 16 18" fill="#D08770"><path d="M8 0c1 3-1.5 4.5-2.5 6C4 8 3 10 4.5 13a5.8 5.8 0 0 0 3.5 3c-1-2 0-3.4 1-4.4.8-.8 1.6-1.7 1.8-3 1.4 1.2 2.4 3.2 1.7 5.4C14.5 12.6 15 10 14 7.5 12.4 3.5 9.5 2.5 8 0z"/></svg>hotmart</span>
+          <span class="pag-logo visa">VISA</span>
+          <span class="pag-logo mc"><i></i><i></i> Mastercard</span>
+          <span class="pag-logo"><span class="amex">AMEX</span></span>
+          <span class="pag-logo maestro"><i></i><i></i> Maestro</span>
+          <span class="pag-logo">Elo</span>
+          <span class="pag-logo diners">Diners Club</span>
+        </div>
+        <div class="badges">
+          <span class="badge-seg">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z" stroke="#8A817C" stroke-width="1.6"/><path d="M8.5 12l2.5 2.5 4.5-4.5" stroke="#8A817C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Compra segura
+          </span>
+          <span class="badge-seg">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2" stroke="#8A817C" stroke-width="1.6"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#8A817C" stroke-width="1.6"/><circle cx="12" cy="15" r="1.6" fill="#8A817C"/></svg>
+            Privacidade protegida
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo-foot">
+    <span class="logo-ico"><svg viewBox="0 0 24 24" class="ic"><path d="M13 4a8 8 0 1 0 7 12A8.5 8.5 0 0 1 13 4z"/></svg></span>
+    <b>Protocolo Noites Inteiras</b>
+  </div>
+  <p>© Todos os direitos reservados.</p>
+  <p>Este é um programa educativo sobre sono infantil e não substitui diagnóstico ou tratamento médico.</p>
+</footer>
+
+<script>
+  /* ============================================
+     LINK DE CHECKOUT — edite apenas esta linha:
+     ============================================ */
+  var CHECKOUT_URL = "#"; // [INSERIR LINK DO CHECKOUT AQUI]
+
+  document.querySelectorAll('.checkout-link').forEach(function(a){
+    a.href = CHECKOUT_URL;
+  });
+
+  /* Botões com href="#oferta-final" rolam suavemente até o bloco de preço no final */
+  document.querySelectorAll('a[href="#oferta-final"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var alvo = document.getElementById('oferta-final');
+      if(alvo){ alvo.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+
+</body>
+</html>
