@@ -612,6 +612,61 @@
     .agora{font-size:4.4rem;}
     .cta-block{max-width:460px;margin-left:auto;margin-right:auto;}
   }
+  /* ---------- microcopy sob CTA ---------- */
+  .cta-micro{text-align:center;font-size:.82rem;color:var(--body);margin-top:12px;opacity:.92;}
+
+  /* ---------- bloco garantia (texto destacado) ---------- */
+  .garantia-box{
+    background:#fff;border:2px solid var(--pink);border-radius:22px;
+    padding:34px 26px;max-width:620px;margin:0 auto;text-align:center;
+    box-shadow:0 16px 40px rgba(156,99,108,.14);
+  }
+  .garantia-box .selo{
+    width:78px;height:78px;margin:0 auto 16px;border-radius:50%;
+    background:var(--blush);border:2px solid var(--pink);
+    display:flex;align-items:center;justify-content:center;color:var(--mauve);
+  }
+  .garantia-box .selo svg{width:42px;height:42px;}
+  .garantia-box h2{font-size:1.3rem;margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px;}
+  .garantia-box p{font-size:.98rem;margin-bottom:10px;}
+  .garantia-box .frase{font-family:Georgia,serif;font-style:italic;color:var(--mauve);font-size:1.08rem;margin-top:8px;margin-bottom:0;}
+
+  /* ---------- la ciencia detrás ---------- */
+  .ciencia-lista{list-style:none;display:flex;flex-direction:column;gap:14px;margin:28px 0 0;}
+  .ciencia-lista li{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;}
+  .ciencia-lista li .chk{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--blush);color:var(--mauve);display:flex;align-items:center;justify-content:center;margin-top:1px;}
+  .ciencia-lista li .chk svg{width:16px;height:16px;}
+  .ciencia-lista li p{margin:0;font-size:.9rem;}
+  .ciencia-fecho{text-align:center;font-weight:600;color:var(--ink);margin-top:24px;font-size:.95rem;}
+
+  /* ---------- bônus (offer stack) ---------- */
+  .bonus-intro{text-align:center;font-weight:700;color:var(--ink);font-size:1.12rem;margin:40px 0 22px;}
+  .bonus-grid{display:flex;flex-direction:column;gap:16px;}
+  .bonus-card{background:var(--blush);border:1px solid var(--pink);border-radius:16px;padding:20px 22px 20px 66px;position:relative;}
+  .bonus-card .gift{position:absolute;left:18px;top:20px;width:36px;height:36px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--mauve);box-shadow:0 4px 10px rgba(156,99,108,.12);}
+  .bonus-card .gift svg{width:20px;height:20px;}
+  .bonus-card h3{font-size:.98rem;margin-bottom:6px;color:var(--ink);}
+  .bonus-card h3 .valor{color:var(--mauve);font-weight:600;white-space:nowrap;}
+  .bonus-card p{margin:0;font-size:.87rem;}
+  .bonus-total{text-align:center;font-weight:700;color:var(--mauve);margin-top:20px;font-size:1.02rem;}
+  .bonus-total s{color:var(--body);opacity:.7;}
+  .bonus-total .gratis{color:var(--verde);text-transform:uppercase;}
+
+  /* ---------- preço: linha de lançamento ---------- */
+  .lanzamiento{font-size:.85rem;color:var(--mauve);font-weight:600;margin:-4px 0 16px;}
+
+  /* ---------- fechamento emocional ---------- */
+  .fecho-lugares{display:flex;flex-direction:column;gap:14px;max-width:560px;margin:0 auto;}
+  .fecho-op{background:#fff;border-radius:14px;padding:18px 20px;font-size:.95rem;text-align:left;box-shadow:0 6px 18px rgba(156,99,108,.08);}
+  .fecho-op.mau{border-left:4px solid var(--pink);color:var(--body);}
+  .fecho-op.bom{border-left:4px solid var(--verde);color:var(--ink);font-weight:600;}
+  .ps{max-width:560px;margin:26px auto 0;text-align:left;font-size:.86rem;color:var(--body);}
+  .ps p{margin-bottom:12px;}
+  .ps b{color:var(--ink);}
+
+  @media(min-width:768px){
+    .bonus-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  }
 </style>
 </head>
 <body>
@@ -646,6 +701,8 @@
       </div>
     </div>
     <p class="sub pos-foto">Y un hábito se cambia: <strong>en hasta 14 noches</strong>, con un paso simple por noche y sin una sola lágrima, tu bebé aprende a dormir solo en la cuna — y tú vuelves a dormir toda la noche.</p>
+    <a href="#oferta-final" class="cta-btn cta-block">Quiero a mi bebé durmiendo toda la noche →</a>
+    <p class="cta-micro">Acceso inmediato · Garantía de 14 noches</p>
   </div>
 </section>
 
@@ -699,7 +756,7 @@
         <p>Siestas de 20 minutos cronometrados durante el día</p>
       </div>
       <div class="sintoma">
-        <span class="ic-box"><svg viewBox="0 0 24 24" class="ic"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5"/><text x="12" y="17.6" text-anchor="middle" font-size="7.5" font-weight="700" fill="currentColor" stroke="none" font-family="Poppins,sans-serif">4</text></svg></span>
+        <span class="ic-box"><svg viewBox="0 0 24 24" class="ic"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5M7.5 13h3M13.5 13h3M7.5 16.5h3M13.5 16.5h3"/></svg></span>
         <p>Dormía bien y "se desajustó" cerca de los 4 meses</p>
       </div>
       <div class="sintoma">
@@ -773,6 +830,29 @@
   </div>
 </section>
 
+<!-- ===== CTA pós-pilares (Correção 2a) ===== -->
+<section style="padding-top:0;padding-bottom:56px;">
+  <div class="container centro">
+    <a href="#oferta-final" class="cta-btn cta-block">Quiero a mi bebé durmiendo toda la noche →</a>
+    <p class="cta-micro">Acceso inmediato · Garantía de 14 noches</p>
+  </div>
+</section>
+
+<!-- ===== PREÇO DO MEIO (Correção 3) ===== -->
+<section class="sec-cream">
+  <div class="container centro">
+    <h2>Es hora de darle a tu bebé lo que nunca tuvo: un proceso claro para aprender a dormir solo — y devolverle a tu casa las noches, la energía y el equilibrio.</h2>
+    <p class="sub-serif">Una consultoría privada de sueño infantil cuesta entre €300 y €800.<br>El Protocolo Noches Enteras completo:</p>
+    <div class="preco-card">
+      <p class="antes">Antes: <s>€57</s></p>
+      <p class="agora-label">Hoy:</p>
+      <p class="agora"><small>€</small>19</p>
+      <a href="#" class="cta-btn cta-block checkout-link">Quiero empezar mi protocolo esta noche</a>
+      <p class="selos-linha">Acceso inmediato · Pago seguro · Garantía de 14 noches</p>
+    </div>
+  </div>
+</section>
+
 <!-- ===== BLOCO 8 — CUSTO DE NÃO FAZER NADA ===== -->
 <section>
   <div class="container">
@@ -805,89 +885,41 @@
   </div>
 </section>
 
-<!-- ===== BLOCO 9 — DEPOIMENTOS ===== -->
-<section class="sec-rose">
+<!-- BLOCO DEPOIMENTOS: inserir aqui depoimentos reais quando coletados (prints de WhatsApp + autorización por escrito) -->
+
+<!-- ===== GARANTIA — 14 NOCHES (Correcao 4) ===== -->
+<section class="sec-blush">
   <div class="container">
-    <div class="centro">
-      <div class="eyebrow" style="color:#7E4E57;">
-        <svg viewBox="0 0 24 24" fill="#7E4E57"><path d="M12 21S3 15.3 3 9.6A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 9 2.7C21 15.3 12 21 12 21z"/></svg>
-        Historias reales
+    <div class="garantia-box">
+      <div class="selo">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.5 2.5 4.5-4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
-      <h2>Experiencias de quienes ya aplicaron el protocolo</h2>
-      <hr class="divisor" style="background:#fff;margin-top:16px;">
+      <h2>Garantía Duerme o Te Devuelvo — 14 noches</h2>
+      <p>Aplica el protocolo durante 14 noches. Si el sueño de tu bebé no mejora — o si simplemente cambias de opinión — me escribes un correo y te devuelvo el 100% de tu dinero. Sin preguntas, sin letra pequeña.</p>
+      <p class="frase">El riesgo es mío. El sueño es tuyo.</p>
     </div>
-    <div class="depo-grid">
-      <div class="depo-card">
-        <span class="aspas">"</span>
-        <div class="estrelas">★★★★★</div>
-        <p class="fala">"Mi hija tenía 5 meses y yo dormía en bloques de 40 minutos. Cuando leí 'asociación de sueño' pensé: ¿por qué NADIE me explicó esto antes? Hice el diagnóstico de la noche 1 y descubrí que la acostaba a dormir 1 hora después del punto justo. En la noche 4 durmió 6 horas seguidas. Me desperté asustada pensando que había pasado algo. Hoy, noche 16, duerme de 19:30 a 5:30. Yo me había rendido, de verdad. Menos mal que la garantía me dio el valor de intentarlo."</p>
-        <div class="mae">
-          <span class="avatar"><img src="depo1.jpg" alt="María Fernández"></span>
-          <div><b>María Fernández</b></div>
-        </div>
-      </div>
-      <div class="depo-card">
-        <span class="aspas">"</span>
-        <div class="estrelas">★★★★★</div>
-        <p class="fala">"Mi hijo tiene 3 meses y 7 kilos. SIETE. Dormía en mis brazos y yo pasaba 40 minutos con miedo de respirar. Lo ponía en la cuna... 5 minutos y se despertaba gritando. Pasaba el DÍA con él en brazos, se me bloqueó la muñeca, terminé en el traumatólogo. Pensé que la cuna era un lujo que mi hijo nunca iba a aceptar. El protocolo no me dijo que lo 'dejara ahí' — fue cambiando poco a poco, un paso por noche, yo a su lado todo el tiempo. En la noche 9 lo puse DESPIERTO en la cuna y él... se durmió. Solo. Lloré sentada en el suelo de la habitación. Hoy la siesta y la noche son en la cuna. Mi brazo volvió a ser mío."</p>
-        <div class="mae">
-          <span class="avatar"><img src="depo2.jpg" alt="Valeria Ortiz"></span>
-          <div><b>Valeria Ortiz</b></div>
-        </div>
-      </div>
-      <div class="depo-card">
-        <span class="aspas">"</span>
-        <div class="estrelas">★★★★★</div>
-        <p class="fala">"Mi bebé de 6 meses se despertaba 6, 7, a veces 8 veces por noche. Solo volvía a dormirse al pecho. Yo era un chupete humano y estaba llegando a mi límite — pero TODO método que encontraba hablaba de destete nocturno y yo no quería quitarle el pecho de ninguna manera, amamantar es sagrado para mí. Casi no lo compro por eso. Luego vi en las preguntas frecuentes que no hacía falta destetar y decidí probar por la garantía. Es verdad: sigue mamando muchísimo de día, mama 1 vez de madrugada (que es la que de verdad necesita) y VUELVE A DORMIRSE SOLA. La diferencia es que antes necesitaba el pecho para cada ciclo de sueño. Ahora el pecho es alimento, no muleta. Duermo 6 horas seguidas amamantando. Nadie me dijo que esto era posible."</p>
-        <div class="mae">
-          <span class="avatar"><img src="depo3.jpg" alt="Carmen López"></span>
-          <div><b>Carmen López</b></div>
-        </div>
-      </div>
-      <div class="depo-card">
-        <span class="aspas">"</span>
-        <div class="estrelas">★★★★★</div>
-        <p class="fala">"Yo estaba 100% en contra del entrenamiento de sueño. Para mí era todo crueldad disfrazada, dejar al bebé llorando solo en el cuarto para que 'aprenda'. Se lo dije a la amiga que me lo recomendó y ella: 'es al revés, no te alejas de él en NINGÚN momento'. Leí la página 3 veces buscando la trampa. No la había. Hice el protocolo con mi hijo de 4 meses y lo máximo que hubo fue un quejido de acomodo — de esos que ya hacía en mis propios brazos. Yo presente en cada noche, cada paso. En 13 noches ya dormía solo. Mi vínculo con él no cambió NADA, se despierta sonriendo. Para las madres que están en contra del llanto controlado como yo: es literalmente lo opuesto. Vigilo estas cosas como un halcón y lo firmo."</p>
-        <div class="mae">
-          <span class="avatar"><img src="depo4.jpg" alt="Daniela Navarro"></span>
-          <div><b>Daniela Navarro</b></div>
-        </div>
-      </div>
-      <div class="depo-card">
-        <span class="aspas">"</span>
-        <div class="estrelas">★★★★★</div>
-        <p class="fala">"Mi hija DORMÍA TODA LA NOCHE desde los 2 meses. Yo me lucía, de verdad. Luego cumplió 4 meses y de la nada: despertar cada hora, lucha para dormir, siestas de 20 minutos. Pensé que eran los dientes, después que eran cólicos, después que era yo. Pasé 3 semanas esperando que 'la etapa pasara' y solo empeoraba. Con el protocolo entendí que la regresión de los 4 meses no es una etapa que pasa — es su sueño que maduró y AHORA necesitaba saber dormir sola, algo que nunca antes había necesitado. Tenía todo el sentido. Seguí el paso a paso y en 10 noches recuperé a mi dormilona — mejor que antes, porque ahora enlaza los ciclos sola. Si tu bebé 'se desajustó' de la nada: no esperes. Yo esperé 3 semanas que me costaron caro."</p>
-        <div class="mae">
-          <span class="avatar"><img src="depo5.jpg" alt="Laura García"></span>
-          <div><b>Laura García</b></div>
-        </div>
-      </div>
-    </div>
-    <a href="#oferta-final" class="cta-btn cta-block cta-branco" style="margin-top:34px;">Quiero a mi bebé durmiendo toda la noche</a>
   </div>
 </section>
 
-<!-- ===== BLOCO 11 — AUTORIDADE ===== -->
+<!-- ===== LA CIENCIA DETRAS DEL PROTOCOLO (Correcao 6) ===== -->
 <section class="sec-cream">
   <div class="container">
     <div class="centro">
       <div class="eyebrow">
         <svg viewBox="0 0 24 24" fill="#D493A0"><path d="M12 21S3 15.3 3 9.6A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 9 2.7C21 15.3 12 21 12 21z"/></svg>
-        Tu guía en este camino
+        Base cientifica
       </div>
-      <h2>¿Quién te va a guiar en este camino?</h2>
+      <h2>La ciencia detrás del protocolo</h2>
       <hr class="divisor" style="margin-top:16px;">
     </div>
-    <div class="expert-grid">
-      <div class="expert-foto">
-        <img src="expert-renata.jpg" alt="Renata, consultora de sueño infantil">
-      </div>
-      <div class="expert-txt centro">
-        <p>Pasé 7 meses durmiendo en bloques de dos horas con mi primer hijo. Lo ponía en la cuna y, pocos minutos después, se despertaba llorando. La única forma en que se dormía era en mis brazos. Todas las noches eran iguales, y yo me iba a dormir sabiendo que despertaría agotada al día siguiente. Mientras todos decían que era "solo una etapa", yo decidí buscar una respuesta.</p>
-        <p>Fue entonces cuando fui a la University of Maryland, donde se encuentra el Sleep Disorders Center [centro médico especializado en el diagnóstico y el tratamiento de los problemas relacionados con el sueño], certificado por la Academia Americana de Medicina del Sueño (AASM): el organismo oficial que regula la medicina del sueño en Estados Unidos. Cuando tuve a mi segundo hijo, empecé a aplicar el método que llamamos <strong>noches completas</strong>, que consiste en pequeños cambios de hábitos, y fue cuando todo cambió: mi hijo aprendió a dormir en la cuna, nuestras noches se volvieron tranquilas y yo volví a descansar.</p>
-        <p>Hoy ayudo a madres que están viviendo exactamente lo que yo viví. Y, en los próximos 14 días, voy a mostrarte el mismo paso a paso que transformó mis noches, de forma suave, <strong>sin llanto controlado, sin destete forzado</strong> y respetando el ritmo de tu bebé.</p>
-      </div>
-    </div>
+    <p class="centro" style="max-width:640px;margin:0 auto;">El Protocolo Noches Enteras no es una opinión: está construido sobre lo que la ciencia del sueño infantil ya demostró.</p>
+    <ul class="ciencia-lista">
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l5 5L19.5 8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p>Lineamientos de sueño seguro de la Academia Americana de Pediatría (AAP, actualización 2022).</p></li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l5 5L19.5 8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p>Investigación clínica sobre rutinas nocturnas (estudios de la Dra. Jodi Mindell, publicados en la revista <em>Sleep</em>): una rutina consistente mejora el sueño del bebé en pocos días.</p></li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l5 5L19.5 8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p>Evidencia sobre métodos graduales con presencia de los padres — eficaces incluso en bebés con alta sensibilidad a la separación.</p></li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l5 5L19.5 8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p>La maduración del sueño a los 3-4 meses (la "regresión"), documentada por la medicina del sueño: no es una etapa que pasa, es una habilidad que se enseña.</p></li>
+    </ul>
+    <p class="ciencia-fecho">Cada paso de las 14 noches sigue este orden probado — <strong>sin llanto controlado, sin destete forzado, sin improvisación</strong>.</p>
   </div>
 </section>
 
@@ -917,7 +949,7 @@
       </details>
       <details class="faq-item">
         <summary>¿Y si siento que no es para mí?</summary>
-        <div class="resposta"><p>Tienes 7 días de garantía. Accede al contenido y, si no es lo que buscabas, pides el reembolso dentro del plazo.</p></div>
+        <div class="resposta"><p>Tienes 14 noches de garantía. Accede al contenido y, si no es lo que buscabas, pides el reembolso dentro del plazo.</p></div>
       </details>
       <details class="faq-item">
         <summary>¿Voy a tener que dejar a mi bebé llorando?</summary>
@@ -948,6 +980,14 @@
         <div class="resposta"><p>Acceso DE POR VIDA... para aplicarlo cuantas veces quieras — incluso con el próximo hijo.</p></div>
       </details>
     </div>
+  </div>
+</section>
+
+<!-- ===== CTA pós-FAQ (Correção 2b) ===== -->
+<section style="padding-top:0;padding-bottom:56px;">
+  <div class="container centro">
+    <a href="#oferta-final" class="cta-btn cta-block">Quiero a mi bebé durmiendo toda la noche →</a>
+    <p class="cta-micro">Acceso inmediato · Garantía de 14 noches</p>
   </div>
 </section>
 
@@ -988,6 +1028,32 @@
         <p><span class="chk">✔</span>Hábitos para no volver nunca más a los despertares</p>
       </div>
     </div>
+
+    <!-- ===== BÔNUS / OFFER STACK (Correção 8) ===== -->
+    <p class="bonus-intro">🎁 Y AL ENTRAR HOY, TE LLEVAS ESTOS BONOS:</p>
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <span class="gift"><svg viewBox="0 0 24 24" class="ic"><rect x="3.5" y="9" width="17" height="11.5" rx="1.5"/><path d="M3.5 13.5h17M12 9v11.5"/><path d="M12 9S10.5 4.5 8 5.5 9.5 9 12 9M12 9s1.5-4.5 4-3.5S14.5 9 12 9"/></svg></span>
+        <h3>BONO 1 — Kit Regresión de los 4 Meses <span class="valor">(valor <s>€17</s>)</span></h3>
+        <p>El protocolo exacto para cuando tu bebé "dormía bien y se desajustó de la nada". Qué hacer noche a noche para salir de la regresión — y no crear un hábito nuevo en plena crisis.</p>
+      </div>
+      <div class="bonus-card">
+        <span class="gift"><svg viewBox="0 0 24 24" class="ic"><rect x="3.5" y="9" width="17" height="11.5" rx="1.5"/><path d="M3.5 13.5h17M12 9v11.5"/><path d="M12 9S10.5 4.5 8 5.5 9.5 9 12 9M12 9s1.5-4.5 4-3.5S14.5 9 12 9"/></svg></span>
+        <h3>BONO 2 — Checklist de la Habitación Perfecta <span class="valor">(valor <s>€9</s>)</span></h3>
+        <p>Temperatura, oscuridad, ruido blanco y cuna segura: la configuración exacta del cuarto que hace que el bebé se duerma más rápido — lista para aplicar esta misma noche.</p>
+      </div>
+      <div class="bonus-card">
+        <span class="gift"><svg viewBox="0 0 24 24" class="ic"><rect x="3.5" y="9" width="17" height="11.5" rx="1.5"/><path d="M3.5 13.5h17M12 9v11.5"/><path d="M12 9S10.5 4.5 8 5.5 9.5 9 12 9M12 9s1.5-4.5 4-3.5S14.5 9 12 9"/></svg></span>
+        <h3>BONO 3 — Guía Anti-Consejos <span class="valor">(valor <s>€9</s>)</span></h3>
+        <p>Qué responder a la suegra, la abuela y las visitas que "saben todo" ("déjalo llorar", "dale cereal"...) — respuestas listas y amables para proteger el protocolo sin pelear con nadie.</p>
+      </div>
+      <div class="bonus-card">
+        <span class="gift"><svg viewBox="0 0 24 24" class="ic"><rect x="3.5" y="9" width="17" height="11.5" rx="1.5"/><path d="M3.5 13.5h17M12 9v11.5"/><path d="M12 9S10.5 4.5 8 5.5 9.5 9 12 9M12 9s1.5-4.5 4-3.5S14.5 9 12 9"/></svg></span>
+        <h3>BONO 4 — Diario del Sueño de 14 Noches <span class="valor">(valor <s>€7</s>)</span></h3>
+        <p>La planilla imprimible para registrar cada noche en 2 minutos y VER tu progreso — la diferencia entre "siento que no funciona" y "mira: pasamos de 8 despertares a 2".</p>
+      </div>
+    </div>
+    <p class="bonus-total">Valor total de los bonos: <s>€42</s> — hoy incluidos <span class="gratis">GRATIS</span>.</p>
   </div>
 </section>
 
@@ -996,12 +1062,13 @@
   <div class="container centro">
     <h2>Invertir en el sueño de tu bebé es una de las mejores decisiones que puedes tomar.</h2>
     <div class="preco-card">
-      <span class="selo-mini">Garantía de 7 días</span>
+      <span class="selo-mini">Garantía de 14 noches</span>
       <p class="antes">Antes: <s>€57</s></p>
-      <p class="agora-label">Ahora, por solo:</p>
+      <p class="agora-label">Protocolo completo + €42 en bonos:</p>
       <p class="agora"><small>€</small>19</p>
+      <p class="lanzamiento">Precio de lanzamiento — sube a €57 al cerrar esta etapa.</p>
       <a href="#" class="cta-btn cta-block checkout-link">Quiero empezar mi protocolo esta noche</a>
-      <p class="selos-linha">Acceso inmediato · Pago seguro · Garantía de 7 días</p>
+      <p class="selos-linha">Acceso inmediato · Pago seguro · Garantía de 14 noches</p>
       <div class="pagamentos">
         <div class="metodos">
           <span class="pag-logo"><svg class="flame" viewBox="0 0 16 18" fill="#D08770"><path d="M8 0c1 3-1.5 4.5-2.5 6C4 8 3 10 4.5 13a5.8 5.8 0 0 0 3.5 3c-1-2 0-3.4 1-4.4.8-.8 1.6-1.7 1.8-3 1.4 1.2 2.4 3.2 1.7 5.4C14.5 12.6 15 10 14 7.5 12.4 3.5 9.5 2.5 8 0z"/></svg>hotmart</span>
@@ -1027,12 +1094,20 @@
   </div>
 </section>
 
-<!-- ===== BLOCO 10 — GARANTIA (movido para depois do preço final) ===== -->
-<section>
-  <div class="container">
-    <figure class="garantia-img">
-      <img src="garantia-selo.png" alt="Garantía de reembolso: accede al protocolo y pruébalo con tranquilidad; si decides que no es lo que buscabas, devolución del 100% del dinero, sin preguntas ni complicaciones">
-    </figure>
+<!-- ===== FECHAMENTO EMOCIONAL + P.D. (Correção 10) ===== -->
+<section class="sec-blush">
+  <div class="container centro">
+    <h2>Dentro de 14 noches vas a estar en uno de estos dos lugares:</h2>
+    <hr class="divisor" style="margin:16px auto 26px;">
+    <div class="fecho-lugares">
+      <div class="fecho-op mau">De pie, a oscuras, a las 3 de la madrugada, meciendo a tu bebé y esperando que "la etapa pase"...</div>
+      <div class="fecho-op bom">O durmiendo toda la noche, al lado de un bebé que aprendió a dormir solo — sin una sola lágrima.</div>
+    </div>
+    <a href="#" class="cta-btn cta-block checkout-link" style="margin-top:28px;">Sí, quiero noches enteras</a>
+    <div class="ps">
+      <p><b>P.D.</b> — Protocolo completo de 14 noches + los 4 bonos (€42), por €19, con garantía de 14 noches. Lo pruebas durmiendo. Si no duermes, no pagas.</p>
+      <p><b>P.P.D.</b> — Cada semana que pasa, la asociación se hace más fuerte y tu bebé más pesado en tus brazos. Empieza esta noche.</p>
+    </div>
   </div>
 </section>
 
