@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) - Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16831893952"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16831893952');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xvbpsrbaun");
+</script>
+<title>Protocolo Noches Completas — El Sueño del Bebé sin Dejarlo Llorar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ===================== TOKENS / BASE ===================== */
+  :root{
+    --azul:#4A90D9;
+    --azul-esc:#2E5C8A;
+    --azul-bebe:#A8D8EA;
+    --rosa:#F7C5D8;
+    --ink:#213247;
+    --body:#5A6b7d;
+    --line:#E6EEF6;
+    --verde:#31A24C;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Nunito',-apple-system,BlinkMacSystemFont,sans-serif;
+    background:#fff;color:var(--body);line-height:1.55;font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:600px;margin:0 auto;padding:0 20px;}
+  h1,h2,h3{color:var(--azul-esc);font-weight:800;line-height:1.25;}
+  strong{color:var(--azul-esc);font-weight:800;}
+
+  /* ===================== PROGRESSO (Pregunta X de 5) ===================== */
+  #progress{position:sticky;top:0;z-index:40;background:#fff;padding:14px 0 10px;border-bottom:1px solid var(--line);}
+  #progress.hidden{display:none;}
+  #progress .lbl{text-align:center;font-size:.8rem;font-weight:700;color:var(--azul);letter-spacing:.5px;margin-bottom:8px;text-transform:uppercase;}
+  #progress .track{height:8px;background:var(--line);border-radius:99px;overflow:hidden;max-width:560px;margin:0 auto;}
+  #progress .track>span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--azul-bebe),var(--azul));border-radius:99px;transition:width .5s ease;}
+
+  /* ===================== TELAS / FADE ===================== */
+  .screen{display:none;padding:34px 0 60px;}
+  .screen.active{display:block;animation:fadeUp .38s ease;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+
+  .q-title{font-size:1.5rem;text-align:center;margin-bottom:6px;}
+  .q-title.big{font-size:1.75rem;}
+  .q-sub{text-align:center;font-size:.95rem;margin-bottom:24px;}
+
+  /* ===================== CARDS DE RESPOSTA ===================== */
+  .options{display:flex;flex-direction:column;gap:12px;}
+  .opt{
+    background:#fff;border:2px solid var(--line);border-radius:16px;
+    padding:18px 20px;font-size:1rem;font-weight:700;color:var(--ink);
+    text-align:left;cursor:pointer;box-shadow:0 3px 10px rgba(46,92,138,.05);
+    transition:border-color .15s,transform .1s,box-shadow .15s,background .15s;
+    display:flex;align-items:center;gap:12px;
+  }
+  .opt:hover{border-color:var(--azul-bebe);transform:translateY(-1px);box-shadow:0 6px 16px rgba(46,92,138,.10);}
+  .opt.sel{border-color:var(--azul);background:#F4FaFF;}
+  .opt .box{width:22px;height:22px;border-radius:6px;border:2px solid var(--line);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s;}
+  .opt.sel .box{background:var(--azul);border-color:var(--azul);}
+  .opt .box svg{width:13px;height:13px;opacity:0;}
+  .opt.sel .box svg{opacity:1;}
+  .opt.single .box{border-radius:50%;}
+
+  /* ===================== BOTÕES ===================== */
+  .btn{
+    display:block;width:100%;background:var(--azul);color:#fff;border:none;
+    font-family:inherit;font-weight:800;font-size:1.05rem;text-transform:uppercase;
+    letter-spacing:.4px;padding:18px 22px;border-radius:14px;cursor:pointer;text-align:center;
+    text-decoration:none;box-shadow:0 8px 22px rgba(74,144,217,.35);transition:.15s;
+  }
+  .btn:hover{background:#3A7EC4;transform:translateY(-1px);}
+  .btn[disabled]{opacity:.45;cursor:not-allowed;box-shadow:none;transform:none;}
+  .btn.pulse{animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%,100%{box-shadow:0 8px 22px rgba(74,144,217,.35);}50%{box-shadow:0 8px 30px rgba(74,144,217,.65);}}
+  .btn-mt{margin-top:22px;}
+
+  /* ===================== MICRO-VALIDAÇÃO ===================== */
+  #micro{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:rgba(255,255,255,.72);backdrop-filter:blur(3px);padding:24px;}
+  #micro.show{display:flex;}
+  #micro .card{background:#fff;border-radius:20px;box-shadow:0 20px 50px rgba(46,92,138,.22);border:1px solid var(--line);padding:30px 26px;max-width:440px;text-align:center;animation:pop .3s ease;}
+  @keyframes pop{from{opacity:0;transform:scale(.9);}to{opacity:1;transform:none;}}
+  #micro .ok{width:56px;height:56px;border-radius:50%;background:var(--verde);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;animation:okpop .4s ease;}
+  @keyframes okpop{0%{transform:scale(0);}70%{transform:scale(1.15);}100%{transform:scale(1);}}
+  #micro .ok svg{width:30px;height:30px;}
+  #micro p{font-size:1.02rem;font-weight:700;color:var(--ink);line-height:1.5;}
+
+  /* ===================== ANÁLISE (loading) ===================== */
+  #s-analisis{text-align:center;padding-top:90px;}
+  .spinner{width:64px;height:64px;border:6px solid var(--line);border-top-color:var(--azul);border-radius:50%;margin:0 auto 28px;animation:spin 1s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  #analisisTxt{font-size:1.2rem;font-weight:800;color:var(--azul-esc);min-height:2.6em;}
+
+  /* ===================== PONTE + VSL ===================== */
+  #s-bridge{padding-top:28px;}
+  .bridge-title{font-size:1.4rem;text-align:center;margin-bottom:16px;}
+  .bridge-body{font-size:1.02rem;color:var(--ink);line-height:1.6;margin-bottom:22px;}
+
+  .vsl{position:relative;width:100%;max-width:360px;margin:0 auto;background:#0e1420;border-radius:14px;overflow:hidden;box-shadow:0 14px 40px rgba(46,92,138,.28);line-height:0;}
+  .vsl video{width:100%;height:auto;display:block;}
+  /* placeholder cinza enquanto o vídeo não é inserido */
+  .vsl .placeholder{background:repeating-linear-gradient(135deg,#1a2333,#1a2333 14px,#161e2c 14px,#161e2c 28px);display:flex;align-items:center;justify-content:center;color:#5b6b82;font-weight:700;font-size:.85rem;text-align:center;padding:20px;}
+  #vslOverlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;cursor:pointer;background:rgba(10,16,26,.55);z-index:5;transition:opacity .3s;}
+  #vslOverlay.show{}
+  #vslOverlay.hide{opacity:0;pointer-events:none;}
+  #vslOverlay .spk{width:74px;height:74px;border-radius:50%;background:var(--azul);display:flex;align-items:center;justify-content:center;animation:pulse2 1.4s infinite;}
+  @keyframes pulse2{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(74,144,217,.55);}50%{transform:scale(1.06);box-shadow:0 0 0 18px rgba(74,144,217,0);}}
+  #vslOverlay .spk svg{width:34px;height:34px;}
+  #vslOverlay .t1{color:#fff;font-weight:800;font-size:1.05rem;}
+  #vslOverlay .t2{color:#cfe0f2;font-weight:700;font-size:.9rem;}
+
+  /* barra estilo VTurb: fina, no rodapé do vídeo, correndo conforme toca */
+  .vsl-bar{position:absolute;left:0;right:0;bottom:0;height:7px;background:rgba(255,255,255,.22);overflow:hidden;z-index:8;}
+  .vsl-bar>span{display:block;height:100%;width:0;background:var(--azul);transition:width .35s linear;}
+
+  /* ===================== MINI-OFERTA ===================== */
+  #miniOferta{display:none;margin-top:34px;}
+  #miniOferta.reveal{display:block;animation:fadeUp .5s ease;}
+  .micro-cta{text-align:center;font-size:.85rem;color:var(--body);margin-top:12px;}
+  .stack{margin-top:36px;}
+  .stack h3{font-size:1.15rem;text-align:center;margin-bottom:18px;}
+  .stack-item{background:#F7FBFF;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px;display:flex;justify-content:space-between;gap:14px;align-items:flex-start;}
+  .stack-item p{font-size:.92rem;color:var(--ink);font-weight:600;margin:0;}
+  .stack-item .val{color:#C0392B;font-weight:800;white-space:nowrap;font-size:.95rem;}
+  .stack-total{text-align:center;font-weight:800;color:var(--azul-esc);margin-top:10px;font-size:1.05rem;}
+  .stack-total s{color:#C0392B;}
+
+  .precio-box{text-align:center;margin:32px 0 8px;}
+  .precio-box .lead{font-size:1rem;font-weight:700;color:var(--ink);}
+  .precio-box .big{font-size:3rem;font-weight:800;color:var(--azul-esc);line-height:1.1;margin:4px 0;}
+  .precio-box .sub{font-size:.95rem;font-style:italic;color:var(--body);margin-bottom:20px;}
+
+  .garantia{background:#fff;border:2px solid var(--azul-bebe);border-radius:20px;padding:28px 22px;text-align:center;margin:34px 0;box-shadow:0 12px 30px rgba(46,92,138,.10);}
+  .garantia .seal{width:130px;height:auto;display:block;margin:0 auto 16px;}
+  .garantia h3{font-size:1.1rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px;}
+  .garantia p{font-size:.95rem;color:var(--ink);}
+
+  .fecho{background:#F7FBFF;border-radius:18px;padding:26px 22px;margin:30px 0;text-align:center;}
+  .fecho p{font-size:1rem;color:var(--ink);margin-bottom:18px;}
+  .ps{font-size:.86rem;color:var(--body);margin-top:16px;text-align:left;}
+  .ps b{color:var(--ink);}
+
+  /* ===================== PROVA SOCIAL (depoimentos) ===================== */
+  .social{margin-top:38px;}
+  .social-title{font-size:1.15rem;text-align:center;margin-bottom:20px;}
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 4px 14px rgba(46,92,138,.06);}
+  .tcard .stars{color:#E8B931;letter-spacing:2px;font-size:1rem;margin-bottom:10px;}
+  .tquote{font-style:italic;font-size:.92rem;color:var(--ink);line-height:1.6;margin-bottom:14px;}
+  .tproof{width:100%;max-width:260px;height:300px;object-fit:cover;object-position:center;border-radius:12px;display:block;margin:0 auto 14px;box-shadow:0 6px 16px rgba(46,92,138,.14);}
+  .tmae{display:flex;align-items:center;gap:12px;}
+  .tmae .tavatar{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--azul-bebe);}
+  .tmae b{color:var(--azul-esc);font-size:.95rem;}
+  .social-disc{text-align:center;font-size:.78rem;color:var(--body);opacity:.75;margin-top:8px;}
+
+  @media(max-width:480px){
+    .q-title{font-size:1.35rem;} .q-title.big{font-size:1.55rem;}
+    .precio-box .big{font-size:2.6rem;}
+  }
+
+</style>
+</head>
+<body>
+
+
+<!-- ===== BARRA DE PROGRESSO ===== -->
+<div id="progress">
+  <div class="lbl" id="progLbl">Pregunta 1 de 5</div>
+  <div class="track"><span id="progFill"></span></div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ P1 ============ -->
+  <section class="screen" id="s-p1">
+    <h1 class="q-title big">¿Cuándo fue la última vez que dormiste una noche entera?</h1>
+    <div class="options" id="opts-p1">
+      <button class="opt single" onclick="Quiz.answerSingle('p1',0)"><span class="box">${CHK}</span>Hace unas semanas</button>
+      <button class="opt single" onclick="Quiz.answerSingle('p1',1)"><span class="box">${CHK}</span>Hace 2 o 3 meses</button>
+      <button class="opt single" onclick="Quiz.answerSingle('p1',2)"><span class="box">${CHK}</span>Desde que nació mi bebé</button>
+      <button class="opt single" onclick="Quiz.answerSingle('p1',3)"><span class="box">${CHK}</span>Ya ni me acuerdo 🥱</button>
+    </div>
+  </section>
+
+  <!-- ============ P2 (define a ponte) ============ -->
+  <section class="screen" id="s-p2">
+    <h2 class="q-title">¿Qué pasa cuando intentas ponerlo en la cuna?</h2>
+    <div class="options">
+      <button class="opt single" onclick="Quiz.answerSingle('p2',0)"><span class="box">${CHK}</span>Solo se duerme en mis brazos o al pecho</button>
+      <button class="opt single" onclick="Quiz.answerSingle('p2',1)"><span class="box">${CHK}</span>Se despierta a los pocos minutos, como si tuviera un sensor</button>
+      <button class="opt single" onclick="Quiz.answerSingle('p2',2)"><span class="box">${CHK}</span>Duerme un rato... y despierta cada hora</button>
+      <button class="opt single" onclick="Quiz.answerSingle('p2',3)"><span class="box">${CHK}</span>Todas las anteriores 😮‍💨</button>
+    </div>
+  </section>
+
+  <!-- ============ P3 (multi + Continuar) ============ -->
+  <section class="screen" id="s-p3">
+    <h2 class="q-title">¿Qué ya intentaste para que duerma?</h2>
+    <p class="q-sub">(marca todo lo que aplique)</p>
+    <div class="options" id="opts-p3">
+      <button class="opt" onclick="Quiz.toggleP3(this,0)"><span class="box">${CHK}</span>Rutina y horarios fijos</button>
+      <button class="opt" onclick="Quiz.toggleP3(this,1)"><span class="box">${CHK}</span>Infusiones, ruido blanco, cuarto oscuro</button>
+      <button class="opt" onclick="Quiz.toggleP3(this,2)"><span class="box">${CHK}</span>Consejos de la familia y videos de internet</button>
+      <button class="opt" onclick="Quiz.toggleP3(this,3)"><span class="box">${CHK}</span>Todo lo anterior... y nada funcionó</button>
+    </div>
+    <button class="btn btn-mt" id="p3btn" disabled onclick="Quiz.continueP3()">Continuar</button>
+  </section>
+
+  <!-- ============ P4 ============ -->
+  <section class="screen" id="s-p4">
+    <h2 class="q-title">¿Sabías que TODOS los bebés se despiertan varias veces por noche... y que la diferencia es que algunos saben volver a dormirse solos?</h2>
+    <div class="options" style="margin-top:22px;">
+      <button class="opt single" onclick="Quiz.answerSingle('p4',0)"><span class="box">${CHK}</span>No... no lo sabía</button>
+      <button class="opt single" onclick="Quiz.answerSingle('p4',1)"><span class="box">${CHK}</span>Algo había escuchado</button>
+      <button class="opt single" onclick="Quiz.answerSingle('p4',2)"><span class="box">${CHK}</span>Sí, pero no sé cómo enseñarle</button>
+    </div>
+  </section>
+
+  <!-- ============ P5 ============ -->
+  <section class="screen" id="s-p5">
+    <h2 class="q-title">Cuando tu bebé duerma toda la noche... ¿qué vas a recuperar primero?</h2>
+    <div class="options" style="margin-top:22px;">
+      <button class="opt single" onclick="Quiz.answerSingle('p5',0)"><span class="box">${CHK}</span>Mis horas de sueño 😴</button>
+      <button class="opt single" onclick="Quiz.answerSingle('p5',1)"><span class="box">${CHK}</span>La paciencia y el buen humor</button>
+      <button class="opt single" onclick="Quiz.answerSingle('p5',2)"><span class="box">${CHK}</span>Tiempo con mi pareja</button>
+      <button class="opt single" onclick="Quiz.answerSingle('p5',3)"><span class="box">${CHK}</span>Sentirme YO otra vez</button>
+    </div>
+  </section>
+
+  <!-- ============ ANÁLISE ============ -->
+  <section class="screen" id="s-analisis">
+    <div class="spinner"></div>
+    <div id="analisisTxt">Analizando tus respuestas...</div>
+  </section>
+
+  <!-- ============ PONTE + VSL + MINI-OFERTA ============ -->
+  <section class="screen" id="s-bridge">
+    <h2 class="bridge-title">✅ Ya sé exactamente por qué tu bebé no duerme.</h2>
+    <p class="bridge-body" id="bridgeBody"></p>
+
+    <!-- ===== PLAYER DA VSL (estilo VTurb) — inserir o <video src> aqui ===== -->
+    <div class="vsl" id="vsl">
+      <!-- vídeo rodando no fundo MUDO (autoplay). Ao clicar no overlay, reinicia do 0 COM áudio. -->
+      <video id="vslVideo" src="https://github.com/Viniciusrochaa3/sleepbaby/releases/download/video-vsl/vsl.mp4" playsinline muted autoplay loop preload="auto"></video>
+      <div id="vslOverlay" class="show" onclick="VSL.start()">
+        <div class="spk">${SPK}</div>
+        <div class="t1">Tu video ya empezó</div>
+        <div class="t2">Haz clic para escuchar</div>
+      </div>
+      <div class="vsl-bar"><span id="vslFill"></span></div>
+    </div>
+
+    <!-- ===== MINI-OFERTA (oculta hasta los 4min) ===== -->
+    <div id="miniOferta">
+      <a href="https://pay.hotmart.com/H106943724U" class="btn pulse btn-mt">QUIERO MIS NOCHES DE VUELTA →</a>
+      <p class="micro-cta">Acceso inmediato · Pago seguro · Garantía de 14 noches</p>
+
+      <div class="stack">
+        <h3>📦 ESTO ES TODO LO QUE RECIBES HOY:</h3>
+        <div class="stack-item">
+          <p><strong>PROTOCOLO NOCHES ENTERAS</strong> — el paso a paso completo de las 14 noches, calibrado para la edad de tu bebé (1 a 6 meses), con las tablas de ventanas de sueño, la guía de siestas y los ajustes para cólicos, reflujo y colecho</p>
+          <span class="val"><s>$497</s></span>
+        </div>
+        <div class="stack-item">
+          <p>🎁 <strong>BONO 1 — Lactancia Abundante:</strong> cómo aumentar tu producción de leche, extraer y almacenar — sin quitarle ninguna toma a tu bebé</p>
+          <span class="val"><s>$147</s></span>
+        </div>
+        <div class="stack-item">
+          <p>🎁 <strong>BONO 2 — Masajes para el Sueño:</strong> el paso a paso de alivio de cólicos, gases y estreñimiento — desde esta misma noche</p>
+          <span class="val"><s>$97</s></span>
+        </div>
+        <div class="stack-item">
+          <p>🎁 <strong>BONO 3 — Recordatorio de Cabecera:</strong> el checklist del sueño para aplicar HOY, antes incluso de la primera clase</p>
+          <span class="val"><s>$37</s></span>
+        </div>
+        <p class="stack-total">Valor total: más de <s>$778</s></p>
+      </div>
+
+      <div class="precio-box">
+        <p class="lead">Hoy te llevas todo por:</p>
+        <p class="big">$49,90</p>
+        <p class="sub">Menos que una sola consulta particular... por el sueño de toda tu familia.</p>
+        <a href="https://pay.hotmart.com/H106943724U" class="btn pulse">SÍ, QUIERO EL PROTOCOLO COMPLETO →</a>
+      </div>
+
+      <div class="garantia">
+        <img class="seal" src="garantia.jpeg" alt="Garantía 14 días incondicional">
+        <h3>Garantía Duerme o Te Devuelvo — 14 noches</h3>
+        <p>Aplica el protocolo durante 14 noches. Si el sueño de tu bebé no mejora — o si simplemente cambias de opinión — me escribes y te devuelvo el 100%. Sin preguntas, sin letra pequeña. El riesgo es mío. El sueño es tuyo.</p>
+      </div>
+
+      <!-- ===== PROVA SOCIAL (depoimentos reais) ===== -->
+      <div class="social">
+        <h3 class="social-title">Experiencias de quienes ya aplicaron el protocolo</h3>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p class="tquote">"Mi hija tenía 5 meses y yo dormía en bloques de 40 minutos. Cuando leí 'asociación de sueño' pensé: ¿por qué NADIE me explicó esto antes? Hice el diagnóstico de la noche 1 y descubrí que la acostaba a dormir 1 hora después del punto justo. En la noche 4 durmió 6 horas seguidas. Me desperté asustada pensando que había pasado algo. Hoy, noche 16, duerme de 19:30 a 5:30. Yo me había rendido, de verdad. Menos mal que la garantía me dio el valor de intentarlo."</p>
+          <img class="tproof" src="bb1.jpeg" alt="Bebé durmiendo solo en la cuna">
+          <div class="tmae"><img class="tavatar" src="depo1.jpg" alt="María Fernández"><b>María Fernández</b></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p class="tquote">"Mi hijo tiene 3 meses y 7 kilos. SIETE. Dormía en mis brazos y yo pasaba 40 minutos con miedo de respirar. Lo ponía en la cuna... 5 minutos y se despertaba gritando. Pasaba el DÍA con él en brazos, se me bloqueó la muñeca, terminé en el traumatólogo. Pensé que la cuna era un lujo que mi hijo nunca iba a aceptar. El protocolo no me dijo que lo 'dejara ahí' — fue cambiando poco a poco, un paso por noche, yo a su lado todo el tiempo. En la noche 9 lo puse DESPIERTO en la cuna y él... se durmió. Solo. Lloré sentada en el suelo de la habitación. Hoy la siesta y la noche son en la cuna. Mi brazo volvió a ser mío."</p>
+          <img class="tproof" src="bb2.jpeg" alt="Bebé durmiendo solo en la cuna">
+          <div class="tmae"><img class="tavatar" src="depo2.jpg" alt="Valeria Ortiz"><b>Valeria Ortiz</b></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p class="tquote">"Mi bebé de 6 meses se despertaba 6, 7, a veces 8 veces por noche. Solo volvía a dormirse al pecho. Yo era un chupete humano y estaba llegando a mi límite — pero TODO método que encontraba hablaba de destete nocturno y yo no quería quitarle el pecho de ninguna manera, amamantar es sagrado para mí. Casi no lo compro por eso. Luego vi en las preguntas frecuentes que no hacía falta destetar y decidí probar por la garantía. Es verdad: sigue mamando muchísimo de día, mama 1 vez de madrugada (que es la que de verdad necesita) y VUELVE A DORMIRSE SOLA. La diferencia es que antes necesitaba el pecho para cada ciclo de sueño. Ahora el pecho es alimento, no muleta. Duermo 6 horas seguidas amamantando. Nadie me dijo que esto era posible."</p>
+          <img class="tproof" src="bb3.jpeg" alt="Bebé durmiendo solo en la cuna">
+          <div class="tmae"><img class="tavatar" src="depo3.jpg" alt="Carmen López"><b>Carmen López</b></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p class="tquote">"Yo estaba 100% en contra del entrenamiento de sueño. Para mí era todo crueldad disfrazada, dejar al bebé llorando solo en el cuarto para que 'aprenda'. Se lo dije a la amiga que me lo recomendó y ella: 'es al revés, no te alejas de él en NINGÚN momento'. Leí la página 3 veces buscando la trampa. No la había. Hice el protocolo con mi hijo de 4 meses y lo máximo que hubo fue un quejido de acomodo — de esos que ya hacía en mis propios brazos. Yo presente en cada noche, cada paso. En 13 noches ya dormía solo. Mi vínculo con él no cambió NADA, se despierta sonriendo. Para las madres que están en contra del llanto controlado como yo: es literalmente lo opuesto. Vigilo estas cosas como un halcón y lo firmo."</p>
+          <img class="tproof" src="bb4.jpeg" alt="Bebé durmiendo solo en la cuna">
+          <div class="tmae"><img class="tavatar" src="depo4.jpg" alt="Daniela Navarro"><b>Daniela Navarro</b></div>
+        </div>
+
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p class="tquote">"Mi hija DORMÍA TODA LA NOCHE desde los 2 meses. Yo me lucía, de verdad. Luego cumplió 4 meses y de la nada: despertar cada hora, lucha para dormir, siestas de 20 minutos. Pensé que eran los dientes, después que eran cólicos, después que era yo. Pasé 3 semanas esperando que 'la etapa pasara' y solo empeoraba. Con el protocolo entendí que la regresión de los 4 meses no es una etapa que pasa — es su sueño que maduró y AHORA necesitaba saber dormir sola, algo que nunca antes había necesitado. Tenía todo el sentido. Seguí el paso a paso y en 10 noches recuperé a mi dormilona — mejor que antes, porque ahora enlaza los ciclos sola. Si tu bebé 'se desajustó' de la nada: no esperes. Yo esperé 3 semanas que me costaron caro."</p>
+          <img class="tproof" src="bb5.jpeg" alt="Bebé durmiendo solo en la cuna">
+          <div class="tmae"><img class="tavatar" src="depo5.jpg" alt="Laura García"><b>Laura García</b></div>
+        </div>
+
+        <p class="social-disc">Los resultados pueden variar.</p>
+      </div>
+
+      <div class="fecho">
+        <p>Dentro de 14 noches vas a estar en uno de estos dos lugares: de pie, a las 3 de la madrugada, meciendo a tu bebé y esperando que "se le pase"... o durmiendo toda la noche, al lado de un bebé que aprendió a dormir solo. Sin una sola lágrima.</p>
+        <a href="https://pay.hotmart.com/H106943724U" class="btn pulse">QUIERO EMPEZAR ESTA NOCHE →</a>
+        <p class="ps"><b>P.D.</b> — Protocolo completo + $281 en bonos por $49,90, con garantía de 14 noches. Lo pruebas durmiendo. Si no duermes, no pagas.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== MICRO-VALIDAÇÃO (overlay) ===== -->
+<div id="micro"><div class="card"><div class="ok">${CHK_W}</div><p id="microTxt"></p></div></div>
+
+<script>
+/* =====================================================================
+   ÍCONES (SVG inline) — injetados nos ${...} acima via replace no load
+   ===================================================================== */
+(function(){
+  var CHK='<svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l5 5L19.5 8" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var CHK_W='<svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l5 5L19.5 8" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var SPK='<svg viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="#fff"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>';
+  document.body.innerHTML=document.body.innerHTML
+    .split('${CHK_W}').join(CHK_W)
+    .split('${CHK}').join(CHK)
+    .split('${SPK}').join(SPK);
+})();
+
+/* =====================================================================
+   ESTADO / RESPOSTAS
+   ===================================================================== */
+var answers={p1:null,p2:null,p3:[],p4:null,p5:null};
+
+/* eco da P1 (adaptado à 2ª pessoa) */
+var P1_ECHO=['hace unas semanas','hace 2 o 3 meses','desde que nació tu bebé','desde hace tanto que ya ni te acuerdas'];
+/* itens da P3 em minúsculas */
+var P3_LOW=['rutina y horarios fijos','infusiones, ruido blanco, cuarto oscuro','consejos de la familia y videos de internet'];
+
+function p3Echo(sel){
+  if(sel.indexOf(3)>-1 || sel.length>=3) return 'de todo, y nada funcionó';
+  var items=sel.filter(function(i){return i<3;}).map(function(i){return P3_LOW[i];});
+  if(items.length===0) return 'varias cosas';
+  if(items.length===1) return items[0];
+  var last=items[items.length-1];
+  var conj=/^(i|hi)/i.test(last)?' e ':' y ';   /* "y" -> "e" antes de sonido i */
+  return items.slice(0,-1).join(', ')+conj+last;
+}
+
+/* =====================================================================
+   NAVEGAÇÃO DE TELAS + PROGRESSO
+   ===================================================================== */
+var QORDER=['s-p1','s-p2','s-p3','s-p4','s-p5'];
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');});
+  var el=document.getElementById(id); el.classList.add('active');
+  window.scrollTo(0,0);
+  /* progresso só nas 5 perguntas */
+  var prog=document.getElementById('progress');
+  var idx=QORDER.indexOf(id);
+  if(idx>-1){
+    prog.classList.remove('hidden');
+    document.getElementById('progLbl').textContent='Pregunta '+(idx+1)+' de 5';
+    document.getElementById('progFill').style.width=((idx+1)/5*100)+'%';
+  } else { prog.classList.add('hidden'); }
+}
+
+/* =====================================================================
+   MICRO-VALIDAÇÃO (1,8s → avança sozinho)
+   ===================================================================== */
+function showMicro(txt,next){
+  document.getElementById('microTxt').textContent=txt;
+  var m=document.getElementById('micro'); m.classList.add('show');
+  setTimeout(function(){ m.classList.remove('show'); if(next) next(); },1800);
+}
+
+/* =====================================================================
+   LÓGICA DO QUIZ
+   ===================================================================== */
+var Quiz={
+  answerSingle:function(q,idx){
+    answers[q]=idx;
+    /* feedback visual imediato no card clicado */
+    var opts=document.querySelectorAll('#s-'+q+' .opt');
+    opts.forEach(function(o){o.classList.remove('sel');});
+    if(opts[idx]) opts[idx].classList.add('sel');
+
+    if(q==='p1') showMicro('No estás sola: es lo que vive la mayoría de las mamás de bebés de 1 a 6 meses.', function(){showScreen('s-p2');});
+    else if(q==='p2') showMicro('Eso tiene una causa exacta. Ya llegamos ahí.', function(){showScreen('s-p3');});
+    else if(q==='p4'){
+      var t=(idx===2)?'Entonces solo te falta el paso a paso. Es exactamente lo que viene ahora.'
+                     :'Esa habilidad se enseña. En 14 noches. Sin dejarlo llorar.';
+      showMicro(t, function(){showScreen('s-p5');});
+    }
+    else if(q==='p5') showMicro('Guarda esa respuesta. Es tuya en 14 noches.', function(){runAnalisis();});
+  },
+  toggleP3:function(btn,idx){
+    var i=answers.p3.indexOf(idx);
+    if(i>-1){answers.p3.splice(i,1); btn.classList.remove('sel');}
+    else{answers.p3.push(idx); btn.classList.add('sel');}
+    document.getElementById('p3btn').disabled = answers.p3.length===0;
+  },
+  continueP3:function(){
+    if(answers.p3.length===0) return;
+    showMicro('Nada de eso falló por ti. Falló porque ataca el síntoma... no la causa.', function(){showScreen('s-p4');});
+  }
+};
+
+/* =====================================================================
+   TELA DE ANÁLISE (2,5s, textos alternando) → ponte
+   ===================================================================== */
+function runAnalisis(){
+  showScreen('s-analisis');
+  var txt=document.getElementById('analisisTxt');
+  txt.textContent='Analizando tus respuestas...';
+  setTimeout(function(){ txt.textContent='Identificando el patrón de sueño de tu bebé...'; },1250);
+  setTimeout(function(){
+    var bucket=['A','B','C','D'][answers.p2!=null?answers.p2:0];
+    renderBridge(bucket, P1_ECHO[answers.p1!=null?answers.p1:2], p3Echo(answers.p3));
+    showScreen('s-bridge');
+    VSL.init();
+  },2500);
+}
+
+/* =====================================================================
+   AS 4 PONTES (texto com eco {P1}/{P3})
+   ===================================================================== */
+var BRIDGES={
+  A:'Me dijiste que no duermes una noche entera {P1}, que tu bebé solo se duerme en tus brazos o al pecho... y que ya intentaste {P3}. Tu caso es el más común de todos: <strong>ASOCIACIÓN DE CONTACTO</strong>. Él no sabe dormirse sin ti — todavía. Mira el video: en los primeros 2 minutos te explico por qué se despierta cuando sale de tus brazos... y cómo eso cambia en 14 noches, sin una sola lágrima.',
+  B:'Me dijiste que no duermes bien {P1}, que tu bebé se despierta minutos después de tocar la cuna — como si tuviera un sensor... y que ya intentaste {P3}. El "sensor" tiene nombre y explicación — y es más simple de lo que parece. Está todo en el video: la causa exacta... y el paso a paso para que acepte la cuna en 14 noches, sin llanto.',
+  C:'Me dijiste que no duermes una noche entera {P1}, que tu bebé se despierta cada hora, toda la noche... y que ya intentaste {P3}. Despertar cada hora NO es hambre — es un ciclo de sueño que él no sabe enlazar solo. En el video te muestro la causa... y cómo aprende a enlazar la noche en 14 noches — sin dejarlo llorar y sin quitarle el pecho.',
+  D:'Me dijiste que {P1}, que tu bebé lo junta todo: brazos, sensor en la cuna y despertares toda la noche... y que ya intentaste {P3}. La buena noticia que nadie te dio: las tres cosas tienen la <strong>MISMA causa raíz</strong>. Al resolverla, todo se destraba junto. Mira el video: te explico esa causa única... y el paso a paso de 14 noches para resolverla — sin una sola lágrima.'
+};
+function renderBridge(bucket,p1txt,p3txt){
+  var html=BRIDGES[bucket].split('{P1}').join(p1txt).split('{P3}').join(p3txt);
+  document.getElementById('bridgeBody').innerHTML=html;
+}
+
+/* =====================================================================
+   VSL — overlay, barra não-linear, revelação aos 240s (sessionStorage)
+   ===================================================================== */
+var VSL={
+  t:0, started:false, revealed:false,
+  REVEAL_AT:258, K:139.3,   /* 258s = 4:18 · K calibra a curva não-linear (~35% aos 60s) */
+  progress:function(t){ return Math.min(99, 100*(1-Math.exp(-t/this.K))); },
+  vid:function(){ return document.getElementById('vslVideo'); },
+  /* liga o vídeo no fundo (mudo) + barra correndo conforme o tempo REAL do vídeo */
+  attach:function(){
+    var v=this.vid(); if(!v) return; var self=this;
+    v.muted=true; v.loop=true;
+    var p=v.play(); if(p&&p.catch) p.catch(function(){});
+    v.ontimeupdate=function(){
+      self.t=v.currentTime;
+      document.getElementById('vslFill').style.width=self.progress(self.t)+'%';
+      /* a oferta só revela DEPOIS do clique com som (aos 258s) */
+      if(self.started && self.t>=self.REVEAL_AT) self.reveal(false);
+    };
+  },
+  init:function(){
+    this.attach();
+    /* persistência só em sessionStorage */
+    if(sessionStorage.getItem('vsl_revealed')==='1'){
+      document.getElementById('vslOverlay').classList.add('hide');
+      document.getElementById('vslFill').style.width=this.progress(this.REVEAL_AT)+'%';
+      this.reveal(true);
+    }
+  },
+  start:function(){
+    /* clique no overlay: liga o áudio E REINICIA DO ZERO (a barra reseta e recomeça) */
+    if(this.started) return;
+    this.started=true; this.t=0;
+    document.getElementById('vslOverlay').classList.add('hide');
+    var v=this.vid();
+    if(v){
+      v.loop=false; v.muted=false; try{v.currentTime=0;}catch(e){}
+      var p=v.play(); if(p&&p.catch) p.catch(function(){});
+      /* clique no vídeo pausa/retoma (sem controles nativos, sem avançar) */
+      v.onclick=function(){ if(v.paused) v.play(); else v.pause(); };
+    }
+  },
+  reveal:function(silent){
+    if(this.revealed) return; this.revealed=true;
+    sessionStorage.setItem('vsl_revealed','1');
+    document.getElementById('vslFill').style.width=this.progress(this.REVEAL_AT)+'%';
+    document.getElementById('miniOferta').classList.add('reveal');
+    /* sem rolar a página sozinho (só revela) */
+  }
+};
+
+
+/* start */
+showScreen('s-p1');
+</script>
+</body>
+</html>
