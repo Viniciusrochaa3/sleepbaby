@@ -398,10 +398,16 @@ function p3Echo(sel){
    NAVEGAÇÃO DE TELAS + PROGRESSO
    ===================================================================== */
 var QORDER=['s-p1','s-p2','s-p3','s-p4','s-p5'];
+/* ===== TRACKING (Clarity + GA4-ready) ===== */
+function track(name,props){
+  try{ if(window.clarity){ clarity('event',name); if(props){ for(var k in props){ clarity('set',k,String(props[k])); } } } }catch(e){}
+  try{ if(window.gtag){ gtag('event',name,props||{}); } }catch(e){}
+}
 function showScreen(id){
   document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');});
   var el=document.getElementById(id); el.classList.add('active');
   window.scrollTo(0,0);
+  track('etapa_'+id,{etapa:id});
   /* progresso só nas 5 perguntas */
   var prog=document.getElementById('progress');
   var idx=QORDER.indexOf(id);
@@ -487,7 +493,7 @@ function renderBridge(bucket,p1txt,p3txt){
    VSL — overlay, barra não-linear, revelação aos 240s (sessionStorage)
    ===================================================================== */
 var VSL={
-  t:0, started:false, revealed:false,
+  t:0, started:false, revealed:false, _m:{},
   REVEAL_AT:258, K:139.3,   /* 258s = 4:18 · K calibra a curva não-linear (~35% aos 60s) */
   progress:function(t){ return Math.min(99, 100*(1-Math.exp(-t/this.K))); },
   vid:function(){ return document.getElementById('vslVideo'); },
@@ -499,6 +505,10 @@ var VSL={
     v.ontimeupdate=function(){
       self.t=v.currentTime;
       document.getElementById('vslFill').style.width=self.progress(self.t)+'%';
+      if(self.started && v.duration){
+        var pct=self.t/v.duration*100;
+        [10,25,50,75,90].forEach(function(m){ if(pct>=m && !self._m[m]){ self._m[m]=1; track('vsl_'+m,{vsl_pct:m}); } });
+      }
       /* a oferta só revela DEPOIS do clique com som (aos 258s) */
       if(self.started && self.t>=self.REVEAL_AT) self.reveal(false);
     };
@@ -516,6 +526,7 @@ var VSL={
     /* clique no overlay: liga o áudio E REINICIA DO ZERO (a barra reseta e recomeça) */
     if(this.started) return;
     this.started=true; this.t=0;
+    track('vsl_iniciou');
     document.getElementById('vslOverlay').classList.add('hide');
     var v=this.vid();
     if(v){
@@ -527,6 +538,7 @@ var VSL={
   },
   reveal:function(silent){
     if(this.revealed) return; this.revealed=true;
+    track('vsl_oferta_revelada');
     sessionStorage.setItem('vsl_revealed','1');
     document.getElementById('vslFill').style.width=this.progress(this.REVEAL_AT)+'%';
     document.getElementById('miniOferta').classList.add('reveal');
@@ -537,6 +549,10 @@ var VSL={
 
 /* start */
 showScreen('s-p1');
+track('quiz_inicio');
+document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(a){
+  a.addEventListener('click',function(){ track('checkout_click'); });
+});
 </script>
 </body>
 </html>
